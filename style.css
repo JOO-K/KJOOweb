@@ -99,12 +99,12 @@ main {
     z-index: 1;
 }
 
-main h1{
+.khj h1 {
     position: absolute;
-    width: 400px;
+    width: 65%;
     font-family: Syne;
     font-size: 30px;
     color: black;
     margin: 25px;
-    z-index: 10;
+    z-index: 3;
 }
