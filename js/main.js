@@ -13,11 +13,11 @@ function init() {
 
   //Create scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color('#ff03c0');
+  scene.background = new THREE.Color('transparent');
 
   //Camera setup    
   const fov = 35;
-  const aspect = container.clientWidth * .74/ container.clientHeight;
+  const aspect = container.clientWidth * 1.0/ container.clientHeight * 1.0;
   const near = 0.1;
   const far = 1000;
 
@@ -46,7 +46,7 @@ function init() {
     
   //Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setSize(container.clientWidth * .74, container.clientHeight * 1.0);
+  renderer.setSize(container.clientWidth * 1.0, container.clientHeight * .95);
   renderer.setPixelRatio(window.devicePixelRatio);
 
   container.appendChild(renderer.domElement);
@@ -124,10 +124,10 @@ function animate() {
 init();
 
 function onWindowResize() {
-  camera.aspect = container.clientWidth * .74/ container.clientHeight;
+  camera.aspect = container.clientWidth * 1.0/ container.clientHeight * 0.9;
   camera.updateProjectionMatrix();
 
-  renderer.setSize(container.clientWidth * .74, container.clientHeight);
+  renderer.setSize(container.clientWidth * 1.0, container.clientHeight * 0.9);
 }
 
 window.addEventListener("resize", onWindowResize);
