@@ -1,0 +1,109 @@
+main {
+    background-color: white;
+    width: 100vw;
+}
+
+.grid-item{
+    position: relative;
+    float: left;
+    width: 49.9vw;
+    height: 40vh;
+    background-color: azure;
+    border: .1vw solid black;
+    border-width: 0px .1vw .1vw 0px;
+    overflow: hidden;
+    text-align: center; 
+}
+
+.grid-item-description{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    overflow: hidden;
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.grid-item-description h1{
+    color:black;
+    font-family: Syne;
+    font-size: 20px;
+}
+
+.grid-item-description h2{
+    color:black;
+    font-family: Haptik-Bold;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.grid-item-description h3{
+    color:black;
+    font-family: Supply;
+    font-size: 13px;
+    letter-spacing: .5px;
+    line-height: 20px;
+}
+
+@media all and (max-width: 1000px) {
+    .grid-item {
+        width: 100vw;
+    }
+}
+
+.grid-item img{
+    width: 100%;
+    background-size: cover;
+}
+
+.doodle-item-small{
+    position: relative;
+    float: left;
+    width: 24.9vw;
+    height: 69vh;
+    background-color: azure;
+    border: .1vw solid black;
+    border-width: 0px .1vw .1vw 0px;
+    overflow: hidden;
+    text-align: center; 
+    height: 69vh;
+}
+
+.doodle-item-small img{
+    width: 100%;
+    background-size: cover;
+}
+
+.doodle-item-large{
+    position: relative;
+    float: left;
+    width: 49.9vw;
+    height: 69vh;
+    background-color: azure;
+    border: .1vw solid black;
+    border-width: 0px .1vw .1vw 0px;
+    overflow: hidden;
+    text-align: center; 
+    height: 69vh;
+}
+
+.doodle-item-large img{
+    width: 100%;
+    background-size: cover;
+}
+
+@media all and (max-width: 1000px) {
+    .doodle-item-small{
+        width: 49.8vw;
+        height: 100%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .doodle-item-large{
+        width: 100vw;
+        height: 100%;
+    }
+}
+

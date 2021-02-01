@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Hatton;
+    src: url("fonts/Hatton-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Supply;
+    src: url("fonts/Supply-UltraLight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Cirka;
+    src: url("fonts/Cirka-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Haptik-Bold;
+    src: url("fonts/GT-Haptik-Bold-Trial.otf") format("opentype");
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+.scene,
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+nav{
+    position: float;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    z-index: 10;
+}
+
+nav h2{
+    width: 20vw;
+    font-family: Syne;
+    font-size: 1.0vw;
+    color: black;
+    text-align: center;
+    margin: 1vh 0vh 0vh 0vh;
+    padding: .2vw;
+    border: 1px solid black;
+    border-width: 1px 0px 1px .5px;
+}
+
+@media all and (max-width: 1000px) {
+    nav h2 {
+        font-size: 16px;
+    }
+}
+
+.scrollbar {   
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    width: 102%;
+    background-color: lightpink;
+}
+
+/* The progress container (grey background) */
+.progress-container {  
+    width: 100%;
+    height: 7px;
+    background: lightpink;
+  
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 1vh;
+    background: darkgreen;
+    width: 0%;
+}
+
+main {
+    width: 100vw;
+    z-index: 1;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Proj_b1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="digital.css">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		
+		<nav>
+            <a href="index.html"><h2>Home</h2></a>
+            <a href="digital.html"><h2>Digital</h2></a>
+            <a href="print.html"><h2>Print</h2></a>
+            <a href="doodles.html"><h2>Doodles</h2></a>
+            <a href="info.html"><h2>Info</h2></a>
+        </nav>
+		
+		<main>
+            
+		    <div class="doodle-item-small">
+                <img src="images/doodles/1.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/2.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l1.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/3.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/4.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l2.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/5.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/6.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l3.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/7.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/8.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l4.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/9.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/10.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l5.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/11.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/12.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l6.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/13.jpg">
+            </div>
+            <div class="doodle-item-small">
+                <img src="images/doodles/14.jpg">
+            </div>
+		    <div class="doodle-item-large">
+                <img src="images/doodles/l7.jpg">
+            </div>
+            
+		</main>
+        
+        
+        <div class="scrollbar">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+        
+        <script>
+            window.onscroll = function() {myFunction()};
+
+                function myFunction() {
+                    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    var scrolled = (winScroll / height) * 100;
+                    document.getElementById("myBar").style.width = scrolled + "%";
+                }
+        </script>
+    </body>
