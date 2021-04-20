@@ -21,11 +21,11 @@ function init() {
   const far = 10000;
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 10, 30);
+  camera.position.set(0, 5, 30);
 
   
   //Light setup
-  const ambient = new THREE.AmbientLight(0x404040, 2);
+  const ambient = new THREE.AmbientLight(0x404040, 4);
   scene.add(ambient);
 
   const light = new THREE.DirectionalLight(0xffffff, 1);
@@ -76,9 +76,9 @@ function init() {
   //Load Models
   let loader = new THREE.GLTFLoader();
     
-  loader.load("obj/ring1.gltf", function(gltf) {
-//    scene.add(gltf.scene);
-    ring1 = gltf.scene;
+  loader.load("obj/overheadk2.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    overheadk = gltf.scene;
     animate();
   });
    
@@ -87,7 +87,8 @@ function init() {
 
 function animate() {
     
-    
+  overheadk.rotation.y = Date.now() * 0.0000;     
+  overheadk.position.y = -20;  
     
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
