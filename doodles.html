@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="nav.css">
         <link type="text/css" rel="stylesheet" href="digital.css">
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,15 +14,31 @@
 		
 		
 		<nav>
-            <a href="index.html"><h2>Home</h2></a>
-            <a href="digital.html"><h2>Digital</h2></a>
-            <a href="print.html"><h2>Print</h2></a>
-            <a href="doodles.html"><h2>Doodles</h2></a>
-            <a href="info.html"><h2>Info</h2></a>
+            <div class="dropdown">
+                <button class="dropbtn">DIGITAL</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown2">
+                <button class="dropbtn">PRINT</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown3">
+                <button class="dropbtn"><a href="#">DOODLES</a></button>
+            </div>
+            <div class="dropdown4">
+                <button class="dropbtn"><a href="#">ABOUT</a></button>
+            </div>
         </nav>
 		
 		<main>
-            
 		    <div class="doodle-item-small">
                 <img src="images/doodles/1.jpg">
             </div>
