@@ -18,6 +18,27 @@
     src: url("fonts/GT-Haptik-Bold-Trial.otf") format("opentype");
 }
 
+svg{
+    position: fixed;
+    top: 25px;
+    left: 22px;
+    z-index: 20000;
+    width: 128px;
+    stroke-dasharray: 500;
+    animation: dash 5s infinite linear;
+    animation-delay: 6s;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
 body::-webkit-scrollbar {
   display: none;
 }
