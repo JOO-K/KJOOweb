@@ -192,5 +192,5 @@ window.addEventListener("resize", onWindowResize);
 
 //Orbit Controls
   controls = new THREE.OrbitControls( camera, renderer.domElement);
-  controls.maxZoom = 8000;
+  controls.maxDistance = 1000;
 

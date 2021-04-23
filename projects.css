@@ -1,0 +1,87 @@
+
+
+.navspacer{
+    float: left;
+    width: 250px;
+    height: 100vh;
+    
+    z-index: 1000;
+}
+
+@media all and (max-width: 1000px) {
+    .navspacer{
+        display: none;
+    }
+}
+
+.projectarea{
+    float:left;
+    width: 70vw;
+   
+}
+
+@media all and (max-width: 1000px) {
+    .projectarea{
+        width: 100vw;
+        padding: 0px;
+    }
+}
+
+.projectinfo{
+    
+}
+
+.projecttitle{
+}
+
+.projecttitle h1{
+    font-family: 'DM Serif Display', serif;
+    font-size: 5vw;
+    font-weight: 500;
+    padding: 25px 0px 0px 0px;
+}
+
+@media all and (max-width: 1000px) {
+    .projecttitle h1{
+        font-size: 50px;
+        padding: 0px 0px 0px 25px;
+    }
+}
+
+.projectdescript{
+    width: 650px;
+    padding: 0px 0px 40px 0px;
+}
+
+
+@media all and (max-width: 1000px) {
+     .projectdescript{
+        width: 90vw;
+        padding: 0px 0px 20px 25px;
+    }
+}
+
+.projectdescript h2{
+    font-family: "space mono";
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0px 0px 0px 0px;
+}
+
+.imagebox{
+    float: left;
+    display: inline-block;
+    
+}
+
+.imagebox img{
+    width: 33vw;
+    padding: .5vw;
+}
+
+@media all and (max-width: 1000px) {
+    .imagebox img{
+        width: 100%;
+        padding: 0px;
+    }
+}

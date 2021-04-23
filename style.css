@@ -18,26 +18,6 @@
     src: url("fonts/GT-Haptik-Bold-Trial.otf") format("opentype");
 }
 
-svg{
-    position: fixed;
-    top: 25px;
-    left: 22px;
-    z-index: 20000;
-    width: 128px;
-    stroke-dasharray: 500;
-    animation: dash 5s infinite linear;
-    animation-delay: 6s;
-}
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-    to{
-        stroke-dashoffset: 0;
-    }
-}
-
 .loader {
     position: absolute;
     display: block;
@@ -47,18 +27,22 @@ svg{
     height: 100vh;
     animation: 2s linear infinite;
     background-color: white;
- }
+}
 
 .loader img{
-    width: 500px;
-    height: 500px;
+    margin-top: 25vh;
+    width: 20vw;
+}
+
+.loader h1{
+    font-family: "space mono";
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .hide-loader{
 display:none;
 }
-
-
 
 body::-webkit-scrollbar {
   display: none;
@@ -70,14 +54,12 @@ body {
 }
 
 body {
+    background-color: #f2f2f2;
     margin: 0;
     overflow-x: hidden;
 }
 
 main {
-    background-color: floralwhite;
-    width: 100vw;
-    height: 100vh;
     z-index: 1;
 }
 
@@ -87,8 +69,8 @@ a:link{
 
 .orbcontrols{
     position: absolute;
-    right: 0px;
-    top: 30px;
+    right: -5px;
+    top: 25px;
     z-index: 20000;
 }
 
