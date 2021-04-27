@@ -37,6 +37,7 @@
 .projecttitle h1{
     font-family: 'DM Serif Display', serif;
     font-size: 5vw;
+    line-height: 5.8vw;
     font-weight: 500;
     padding: 25px 0px 0px 0px;
 }
@@ -44,6 +45,7 @@
 @media all and (max-width: 1000px) {
     .projecttitle h1{
         font-size: 50px;
+        line-height: 58px;
         padding: 0px 0px 0px 25px;
     }
 }
@@ -70,18 +72,18 @@
 
 .imagebox{
     float: left;
-    display: inline-block;
-    
-}
-
-.imagebox img{
+    max-height: 650px;
     width: 33vw;
     padding: .5vw;
 }
 
+.imagebox img{
+    width: 100%;
+}
+
 @media all and (max-width: 1000px) {
-    .imagebox img{
-        width: 100%;
-        padding: 0px;
+    .imagebox{
+        width: 100vw;
+        max-height: 1200px;
     }
 }

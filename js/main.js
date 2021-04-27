@@ -21,7 +21,7 @@ function init() {
   const far = 11000;
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 0, -200);
+  camera.position.set(0, 0, 200);
 
   
   //Light setup
@@ -44,12 +44,12 @@ function init() {
 		var geometry = new THREE.CubeGeometry( 10000, 10000, 10000 );
 		var cubeMaterials =
 		[
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posx.jpg' ), side: THREE.DoubleSide } ), // Right side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negx.jpg' ), side: THREE.DoubleSide } ), // Left side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negx.jpg' ), side: THREE.DoubleSide } ), // Right side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posx.jpg' ), side: THREE.DoubleSide } ), // Left side
 			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posy.jpg' ), side: THREE.DoubleSide } ), // Top side
 			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posz.jpg' ), side: THREE.DoubleSide } ), // Front side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negz.jpg' ), side: THREE.DoubleSide } ) // Back side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negz.jpg' ), side: THREE.DoubleSide } ), // Front side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posz.jpg' ), side: THREE.DoubleSide } ) // Back side
 		];    
     // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
 		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
@@ -75,29 +75,29 @@ function init() {
 
     //Create your video texture:
         const videoTexture1 = new THREE.VideoTexture(video1);
-        const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
-        const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
     
         const videoTexture2 = new THREE.VideoTexture(video2);
-        const videoMaterial2a =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.FrontSide, toneMapped: false} );
-        const videoMaterial2b =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial2a =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial2b =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.FrontSide, toneMapped: false} );
     
         const videoTexture3 = new THREE.VideoTexture(video3);
-        const videoMaterial3a =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.FrontSide, toneMapped: false} );
-        const videoMaterial3b =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial3a =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial3b =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.FrontSide, toneMapped: false} );
     
         const videoTexture4 = new THREE.VideoTexture(video4);
-        const videoMaterial4a =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.FrontSide, toneMapped: false} );
-        const videoMaterial4b =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial4a =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial4b =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.FrontSide, toneMapped: false} );
     
         const videoTexture5 = new THREE.VideoTexture(video5);
-        const videoMaterial5a =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.FrontSide, toneMapped: false} );
-        const videoMaterial5b =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial5a =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial5b =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.FrontSide, toneMapped: false} );
     //Create screen
         const screen1 = new THREE.PlaneGeometry(100, 100, 0);
         const screen2 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1a,);
-        const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1b,);
+        const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
+        const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
         scene.add(videoScreen1);
         videoScreen1.position.y = -100; 
         scene.add(videoScreen2);
@@ -105,8 +105,8 @@ function init() {
     
         const screen3 = new THREE.PlaneGeometry(100, 100, 0);
         const screen4 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen3 = new THREE.Mesh(screen3, videoMaterial2a,);
-        const videoScreen4 = new THREE.Mesh(screen4, videoMaterial2b,);
+        const videoScreen3 = new THREE.Mesh(screen3, videoMaterial2b,);
+        const videoScreen4 = new THREE.Mesh(screen4, videoMaterial2a,);
         scene.add(videoScreen3);
         videoScreen3.position.x = -100;
         scene.add(videoScreen4);
@@ -114,8 +114,8 @@ function init() {
     
         const screen5 = new THREE.PlaneGeometry(100, 100, 0);
         const screen6 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen5 = new THREE.Mesh(screen5, videoMaterial3a,);
-        const videoScreen6 = new THREE.Mesh(screen6, videoMaterial3b,);
+        const videoScreen5 = new THREE.Mesh(screen5, videoMaterial3b,);
+        const videoScreen6 = new THREE.Mesh(screen6, videoMaterial3a,);
         scene.add(videoScreen5);
         videoScreen5.position.x = 100;
         scene.add(videoScreen6);
@@ -123,8 +123,8 @@ function init() {
     
         const screen7 = new THREE.PlaneGeometry(100, 100, 0);
         const screen8 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen7 = new THREE.Mesh(screen7, videoMaterial4a,);
-        const videoScreen8 = new THREE.Mesh(screen8, videoMaterial4b,);
+        const videoScreen7 = new THREE.Mesh(screen7, videoMaterial4b,);
+        const videoScreen8 = new THREE.Mesh(screen8, videoMaterial4a,);
         scene.add(videoScreen7);
         videoScreen7.position.y = 100;
         scene.add(videoScreen8);
@@ -132,8 +132,8 @@ function init() {
     
         const screen9 = new THREE.PlaneGeometry(100, 100, 0);
         const screen10 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen9 = new THREE.Mesh(screen9, videoMaterial5a,);
-        const videoScreen10 = new THREE.Mesh(screen10, videoMaterial5b,);
+        const videoScreen9 = new THREE.Mesh(screen9, videoMaterial5b,);
+        const videoScreen10 = new THREE.Mesh(screen10, videoMaterial5a,);
 //        scene.add(videoScreen9);
 //        videoScreen9.position.y = -110;
 //        scene.add(videoScreen10);
