@@ -2,7 +2,7 @@
 
 .navspacer{
     float: left;
-    width: 250px;
+    width: 16vw;
     height: 100vh;
     
     z-index: 1000;
@@ -34,17 +34,29 @@
 .projecttitle{
 }
 
+
 .projecttitle h1{
-    font-family: 'DM Serif Display', serif;
-    font-size: 5vw;
+    font-family: "syne";
+    font-size: 4vw;
     line-height: 5.8vw;
     font-weight: 500;
-    padding: 25px 0px 0px 0px;
+    padding: 100px 0px 0px 0px;
+    animation: 0.7s ease-out 0s 1 loadintext;
+}
+
+@keyframes loadintext {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+ 
 }
 
 @media all and (max-width: 1000px) {
     .projecttitle h1{
-        font-size: 50px;
+        font-size: 35px;
         line-height: 58px;
         padding: 0px 0px 0px 25px;
     }
@@ -64,8 +76,9 @@
 }
 
 .projectdescript h2{
-    font-family: "space mono";
-    font-size: 16px;
+    font-family: "montserrat";
+    font-size: 13.5px;
+    font-weight: 400;
     line-height: 25px;
     padding: 0px 0px 0px 0px;
 }

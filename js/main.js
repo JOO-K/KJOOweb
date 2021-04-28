@@ -55,6 +55,7 @@ function init() {
 		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
 		var cube = new THREE.Mesh( geometry, cubeMaterial );
 		scene.add( cube );
+        
     
     
     //Get your video element:
@@ -99,7 +100,7 @@ function init() {
         const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
         const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
         scene.add(videoScreen1);
-        videoScreen1.position.y = -100; 
+        videoScreen1.position.y = -100;
         scene.add(videoScreen2);
         videoScreen2.position.y = -100;
     
@@ -170,7 +171,7 @@ function animate() {
 //  absform.scale.x += .0;
 //  tahoe.position.x += -40;
 //  deathvalley.position.x += 40;
-    
+
     
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
