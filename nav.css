@@ -160,6 +160,9 @@ hr{
 nav:hover nav {color: aqua;}
 
 /* Change color of dropdown links on hover */
+.logo h1:hover {color: #f57818;}
+
+/* Change color of dropdown links on hover */
 .dropdown-content a:hover {color: white; background-color: #f57818; border-radius: 0px 0px 15px 0px;}
 
 /* Show the dropdown menu on hover */
