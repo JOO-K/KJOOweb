@@ -46,7 +46,7 @@
 }
 
 .loader h1{
-    font-family: "space mono";
+    font-family: "syne";
     font-size: 30px;
     font-weight: 500;
 }
@@ -87,6 +87,12 @@ a:link{
 
 .orbcontrols img{
 width: 80%;
+}
+
+@media all and (max-width: 1000px) {
+    .orbcontrols{
+        display: none;
+    }
 }
 
 .scene,
