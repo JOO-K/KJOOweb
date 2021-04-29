@@ -187,22 +187,35 @@ nav:hover nav {color: aqua;}
 .mobiledropbtn {
   position: fixed;
   right: 10px;
-  top: 10px;
+  top: 13px;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  z-index: -1;
-  display: block;
+  z-index: 30000;
+  display: none;
 }
 
 .mobiledropbtn img{
     width: 40px;
     height: 40px;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 @media all and (max-width: 1000px) {
     .mobiledropbtn{
-        z-index: 30000;
+        display: block;
     }
 }
 
@@ -242,9 +255,6 @@ nav:hover nav {color: aqua;}
 
 /* Change color of dropdown links on hover */
 .mobiledropdown-content a:hover {background-color: orange;}
-
-/* Show the dropdown menu on hover */
-.mobiledropdown:hover .mobiledropdown-content {display: block;}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
