@@ -77,21 +77,21 @@
 
 .projectdescript h2{
     font-family: "montserrat";
-    font-size: 13.5px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 28px;
     padding: 0px 0px 0px 0px;
 }
 
 .imagebox{
     float: left;
-    max-height: 650px;
     width: 33vw;
     padding: .5vw;
 }
 
 .imagebox img{
     width: 100%;
+    object-fit: cover;
 }
 
 @media all and (max-width: 1000px) {
