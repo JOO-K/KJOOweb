@@ -96,7 +96,7 @@
 
 @media all and (max-width: 1000px) {
     .imagebox{
-        width: 100vw;
+        width: 98.5vw;
         max-height: 1200px;
     }
 }
