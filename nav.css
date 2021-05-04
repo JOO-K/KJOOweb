@@ -163,7 +163,7 @@ nav:hover nav {color: aqua;}
 .logo h1:hover {color: #f57818;}
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {color: white; background-color: #f57818; border-radius: 0px 0px 15px 0px;}
+.dropdown-content a:hover {color: white; background-color: orange; border-radius: 0px 0px 15px 0px;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
@@ -244,7 +244,7 @@ nav:hover nav {color: aqua;}
 /* Dropdown Content (Hidden by Default) */
 .mobiledropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: rgba(255,255,255,0.95);
   width: 100vw;
   height: 100vh;
