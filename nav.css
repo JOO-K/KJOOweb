@@ -73,13 +73,20 @@ hr{
     transform-origin: top;
 }
 
+@media all and (max-width: 1000px) {
+    .navmenu h2{
+        font-size: 16px;
+         line-height: 28px;
+    }
+}
+
 #gd{
     font-style: italic;
 }
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: transparent;
+  background-color: #f2f2f2;
   color: black;
   width: 130px;    
   padding: 5.2px;
