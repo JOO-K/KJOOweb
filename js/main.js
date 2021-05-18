@@ -25,10 +25,10 @@ function init() {
 
   
   //Light setup
-  const ambient = new THREE.AmbientLight(0xffffff, 3);
+  const ambient = new THREE.AmbientLight(0xffffff, 1);
   scene.add(ambient);
 
-  const light = new THREE.PointLight(0xffffff, 1);
+  const light = new THREE.PointLight(0xffffff,5);
   light.position.set(-100, 0, 100);
   scene.add(light);
     
@@ -54,7 +54,9 @@ function init() {
     // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
 		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
 		var cube = new THREE.Mesh( geometry, cubeMaterial );
+    cube.rotation.x += .05;
 		scene.add( cube );
+        
         
     
     
@@ -62,79 +64,79 @@ function init() {
         const video1 = document.getElementById('video1');
         video1.autoplay = true;
     
-        const video2 = document.getElementById('video2');
-        video2.autoplay = true;
-    
-        const video3 = document.getElementById('video3');
-        video3.autoplay = true;
-        
-        const video4 = document.getElementById('video4');
-        video4.autoplay = true;
-    
-        const video5 = document.getElementById('video5');
-        video5.autoplay = true;
+//        const video2 = document.getElementById('video2');
+//        video2.autoplay = true;
+//    
+//        const video3 = document.getElementById('video3');
+//        video3.autoplay = true;
+//        
+//        const video4 = document.getElementById('video4');
+//        video4.autoplay = true;
+//    
+//        const video5 = document.getElementById('video5');
+//        video5.autoplay = true;
 
     //Create your video texture:
         const videoTexture1 = new THREE.VideoTexture(video1);
         const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
         const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
     
-        const videoTexture2 = new THREE.VideoTexture(video2);
-        const videoMaterial2a =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial2b =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture3 = new THREE.VideoTexture(video3);
-        const videoMaterial3a =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial3b =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture4 = new THREE.VideoTexture(video4);
-        const videoMaterial4a =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial4b =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture5 = new THREE.VideoTexture(video5);
-        const videoMaterial5a =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial5b =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.FrontSide, toneMapped: false} );
+//        const videoTexture2 = new THREE.VideoTexture(video2);
+//        const videoMaterial2a =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.BackSide, toneMapped: false} );
+//        const videoMaterial2b =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.FrontSide, toneMapped: false} );
+//    
+//        const videoTexture3 = new THREE.VideoTexture(video3);
+//        const videoMaterial3a =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.BackSide, toneMapped: false} );
+//        const videoMaterial3b =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.FrontSide, toneMapped: false} );
+//    
+//        const videoTexture4 = new THREE.VideoTexture(video4);
+//        const videoMaterial4a =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.BackSide, toneMapped: false} );
+//        const videoMaterial4b =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.FrontSide, toneMapped: false} );
+//    
+//        const videoTexture5 = new THREE.VideoTexture(video5);
+//        const videoMaterial5a =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.BackSide, toneMapped: false} );
+//        const videoMaterial5b =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.FrontSide, toneMapped: false} );
     //Create screen
-        const screen1 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen2 = new THREE.PlaneGeometry(100, 100, 0);
+        const screen1 = new THREE.PlaneGeometry(200, 200, 0);
+        const screen2 = new THREE.PlaneGeometry(200, 200, 0);
         const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
         const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
         scene.add(videoScreen1);
-        videoScreen1.position.y = -100;
+        videoScreen1.position.y = 0;
         scene.add(videoScreen2);
-        videoScreen2.position.y = -100;
+        videoScreen2.position.y = 0;
     
-        const screen3 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen4 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen3 = new THREE.Mesh(screen3, videoMaterial2b,);
-        const videoScreen4 = new THREE.Mesh(screen4, videoMaterial2a,);
-        scene.add(videoScreen3);
-        videoScreen3.position.x = -100;
-        scene.add(videoScreen4);
-        videoScreen4.position.x = -100;
-    
-        const screen5 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen6 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen5 = new THREE.Mesh(screen5, videoMaterial3b,);
-        const videoScreen6 = new THREE.Mesh(screen6, videoMaterial3a,);
-        scene.add(videoScreen5);
-        videoScreen5.position.x = 100;
-        scene.add(videoScreen6);
-        videoScreen6.position.x = 100;
-    
-        const screen7 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen8 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen7 = new THREE.Mesh(screen7, videoMaterial4b,);
-        const videoScreen8 = new THREE.Mesh(screen8, videoMaterial4a,);
-        scene.add(videoScreen7);
-        videoScreen7.position.y = 100;
-        scene.add(videoScreen8);
-        videoScreen8.position.y = 100;
-    
-        const screen9 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen10 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen9 = new THREE.Mesh(screen9, videoMaterial5b,);
-        const videoScreen10 = new THREE.Mesh(screen10, videoMaterial5a,);
+//        const screen3 = new THREE.PlaneGeometry(100, 100, 0);
+//        const screen4 = new THREE.PlaneGeometry(100, 100, 0);
+//        const videoScreen3 = new THREE.Mesh(screen3, videoMaterial2b,);
+//        const videoScreen4 = new THREE.Mesh(screen4, videoMaterial2a,);
+//        scene.add(videoScreen3);
+//        videoScreen3.position.x = -100;
+//        scene.add(videoScreen4);
+//        videoScreen4.position.x = -100;
+//    
+//        const screen5 = new THREE.PlaneGeometry(100, 100, 0);
+//        const screen6 = new THREE.PlaneGeometry(100, 100, 0);
+//        const videoScreen5 = new THREE.Mesh(screen5, videoMaterial3b,);
+//        const videoScreen6 = new THREE.Mesh(screen6, videoMaterial3a,);
+//        scene.add(videoScreen5);
+//        videoScreen5.position.x = 100;
+//        scene.add(videoScreen6);
+//        videoScreen6.position.x = 100;
+//    
+//        const screen7 = new THREE.PlaneGeometry(100, 100, 0);
+//        const screen8 = new THREE.PlaneGeometry(100, 100, 0);
+//        const videoScreen7 = new THREE.Mesh(screen7, videoMaterial4b,);
+//        const videoScreen8 = new THREE.Mesh(screen8, videoMaterial4a,);
+//        scene.add(videoScreen7);
+//        videoScreen7.position.y = 100;
+//        scene.add(videoScreen8);
+//        videoScreen8.position.y = 100;
+//    
+//        const screen9 = new THREE.PlaneGeometry(100, 100, 0);
+//        const screen10 = new THREE.PlaneGeometry(100, 100, 0);
+//        const videoScreen9 = new THREE.Mesh(screen9, videoMaterial5b,);
+//        const videoScreen10 = new THREE.Mesh(screen10, videoMaterial5a,);
 //        scene.add(videoScreen9);
 //        videoScreen9.position.y = -110;
 //        scene.add(videoScreen10);
@@ -145,15 +147,15 @@ function init() {
   //Load Models
   let loader = new THREE.GLTFLoader();
     
-  loader.load("obj/tahoe.gltf", function(gltf) {
-//    scene.add(gltf.scene);
-    tahoe = gltf.scene;
+  loader.load("obj/spikering2.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    spikering = gltf.scene;
     animate();
   });
     
-  loader.load("obj/deathvalley.gltf", function(gltf) {
-//    scene.add(gltf.scene);
-    deathvalley = gltf.scene;
+  loader.load("obj/cubering1.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    cubering = gltf.scene;
     animate();
   });
    
@@ -171,8 +173,19 @@ function animate() {
 //  absform.scale.x += .0;
 //  tahoe.position.x += -40;
 //  deathvalley.position.x += 40;
+  spikering.scale.x = 12;
+  spikering.scale.y = 12;
+  spikering.scale.z = 12;
+    spikering.rotation.x += .005;
+    spikering.rotation.z += .005;
+  cubering.scale.x = 11;
+  cubering.scale.y = 11;
+  cubering.scale.z = 11;
+    cubering.rotation.x += -.0025;
+    cubering.rotation.z += -.0025;
+    cubering.rotation.y += -.0025;
 
-    
+
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
     
