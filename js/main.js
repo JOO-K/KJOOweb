@@ -5,32 +5,40 @@ let camera;
 let renderer;
 let scene;
 let house;
+let stars;
+let dome;
+let smile;
+
 
 function init() {
   container = document.querySelector(".scene");
 
   //Create scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color('transparent');
+  scene.background = new THREE.Color('#ffffff00');
 
 
   //Camera setup    
   const fov = 90;
   const aspect = container.clientWidth * 1.0/ container.clientHeight * 1.0;
   const near = 0.1;
-  const far = 11000;
+  const far = 3000;
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 0, 200);
+  camera.position.set(0, 0, -400);
 
   
   //Light setup
-  const ambient = new THREE.AmbientLight(0xffffff, 1);
+  const ambient = new THREE.AmbientLight(0xffffff, .3);
   scene.add(ambient);
 
-  const light = new THREE.PointLight(0xffffff,5);
-  light.position.set(-100, 0, 100);
+  const light = new THREE.PointLight(0xffffff,.7);
+  light.position.set(100, 0, 100);
   scene.add(light);
+    
+  const light2 = new THREE.PointLight(0xffffff,1);
+  light.position.set(300, -100, -500);
+  scene.add(light);    
     
   //Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -39,151 +47,125 @@ function init() {
 
   container.appendChild(renderer.domElement);
 
-  // CUBE
-		// Skybox texture website http://www.custommapmakers.org/skyboxes.php
-		var geometry = new THREE.CubeGeometry( 10000, 10000, 10000 );
-		var cubeMaterials =
-		[
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posx.jpg' ), side: THREE.DoubleSide } ), // Right side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negx.jpg' ), side: THREE.DoubleSide } ), // Left side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posy.jpg' ), side: THREE.DoubleSide } ), // Top side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negz.jpg' ), side: THREE.DoubleSide } ), // Front side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posz.jpg' ), side: THREE.DoubleSide } ) // Back side
-		];    
-    // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
-		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
-		var cube = new THREE.Mesh( geometry, cubeMaterial );
-    cube.rotation.x += .05;
-		scene.add( cube );
-        
-        
+//  // CUBE
+//		// Skybox texture website http://www.custommapmakers.org/skyboxes.php
+//		var geometry = new THREE.CubeGeometry( 10000, 10000, 10000 );
+//		var cubeMaterials =
+//		[
+//			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posx.jpg' ), side: THREE.DoubleSide } ), // Right side
+//			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negx.jpg' ), side: THREE.DoubleSide } ), // Left side
+//			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posy.jpg' ), side: THREE.DoubleSide } ), // Top side
+//			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
+//			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negz.jpg' ), side: THREE.DoubleSide } ), // Front side
+//			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posz.jpg' ), side: THREE.DoubleSide } ) // Back side
+//		];    
+//    // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
+//		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
+//		var cube = new THREE.Mesh( geometry, cubeMaterial );
+//    cube.rotation.x += .05;
+//		scene.add( cube );
+//        
+//        
     
-    
-    //Get your video element:
-        const video1 = document.getElementById('video1');
-        video1.autoplay = true;
-    
-        const video2 = document.getElementById('video2');
-        video2.autoplay = true;
-    
-        const video3 = document.getElementById('video3');
-        video3.autoplay = true;
-        
-        const video4 = document.getElementById('video4');
-        video4.autoplay = true;
-    
-        const video5 = document.getElementById('video5');
-        video5.autoplay = true;
-
-    //Create your video texture:
-        const videoTexture1 = new THREE.VideoTexture(video1);
-        const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture2 = new THREE.VideoTexture(video2);
-        const videoMaterial2a =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial2b =  new THREE.MeshBasicMaterial( {map: videoTexture2, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture3 = new THREE.VideoTexture(video3);
-        const videoMaterial3a =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial3b =  new THREE.MeshBasicMaterial( {map: videoTexture3, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture4 = new THREE.VideoTexture(video4);
-        const videoMaterial4a =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial4b =  new THREE.MeshBasicMaterial( {map: videoTexture4, side: THREE.FrontSide, toneMapped: false} );
-    
-        const videoTexture5 = new THREE.VideoTexture(video5);
-        const videoMaterial5a =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial5b =  new THREE.MeshBasicMaterial( {map: videoTexture5, side: THREE.FrontSide, toneMapped: false} );
-    //Create screen
-        const screen1 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen2 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
-        const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
-        scene.add(videoScreen1);
-        videoScreen1.position.y = 100;
-        scene.add(videoScreen2);
-        videoScreen2.position.y = 100;
-    
-        const screen3 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen4 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen3 = new THREE.Mesh(screen3, videoMaterial2b,);
-        const videoScreen4 = new THREE.Mesh(screen4, videoMaterial2a,);
-        scene.add(videoScreen3);
-        videoScreen3.position.x = -100;
-        scene.add(videoScreen4);
-        videoScreen4.position.x = -100;
-    
-        const screen5 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen6 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen5 = new THREE.Mesh(screen5, videoMaterial3b,);
-        const videoScreen6 = new THREE.Mesh(screen6, videoMaterial3a,);
-        scene.add(videoScreen5);
-        videoScreen5.position.x = 100;
-        scene.add(videoScreen6);
-        videoScreen6.position.x = 100;
-    
-        const screen7 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen8 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen7 = new THREE.Mesh(screen7, videoMaterial4b,);
-        const videoScreen8 = new THREE.Mesh(screen8, videoMaterial4a,);
-        scene.add(videoScreen7);
-        videoScreen7.position.y = 100;
-        scene.add(videoScreen8);
-        videoScreen8.position.y = 100;
-    
-        const screen9 = new THREE.PlaneGeometry(100, 100, 0);
-        const screen10 = new THREE.PlaneGeometry(100, 100, 0);
-        const videoScreen9 = new THREE.Mesh(screen9, videoMaterial5b,);
-        const videoScreen10 = new THREE.Mesh(screen10, videoMaterial5a,);
-        scene.add(videoScreen9);
-        videoScreen9.position.y = -100;
-        scene.add(videoScreen10);
-        videoScreen10.position.y = -100;
-    
-        
-    
+//    
+//    //Get your video element:
+//        const video1 = document.getElementById('video1');
+//        video1.autoplay = true;
+//    
+//
+//    //Create your video texture:
+//        const videoTexture1 = new THREE.VideoTexture(video1);
+//        const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
+//        const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
+//    
+//       
+//    //Create screen
+//        const screen1 = new THREE.PlaneGeometry(100, 100, 0);
+//        const screen2 = new THREE.PlaneGeometry(100, 100, 0);
+//        const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
+//        const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
+//        scene.add(videoScreen1);
+//        videoScreen1.position.y = 0;
+//        scene.add(videoScreen2);
+//        videoScreen2.position.y = 0;
+//    
+//        
+//    
   //Load Models
   let loader = new THREE.GLTFLoader();
     
-  loader.load("obj/spikering2.gltf", function(gltf) {
+  loader.load("obj/dome2.gltf", function(gltf) {
     scene.add(gltf.scene);
-    spikering = gltf.scene;
+    dome = gltf.scene;
     animate();
   });
     
-  loader.load("obj/cubering1.gltf", function(gltf) {
+  loader.load("obj/smile2.gltf", function(gltf) {
     scene.add(gltf.scene);
-    cubering = gltf.scene;
+    smile = gltf.scene;
     animate();
   });
+    
+  loader.load("obj/stars2.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    stars = gltf.scene;
+    animate();
+  });
+    
+  loader.load("obj/banana.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    banana = gltf.scene;
+    animate();
+  });   
+    
+  loader.load("obj/crate2.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    crate = gltf.scene;
+    animate();
+  });   
    
 }
 
 
 function animate() {
+
+   
+  dome.scale.x = 6;
+  dome.scale.y = 6;
+  dome.scale.z = 6;
+  dome.rotation.y += -.007; 
+  dome.rotation.z += -.005; 
+  
     
-//  grid.position.y = -10;
-//  
-//  face.rotation.y += .005;
-//  absform.rotation.z += .05;
-//  absform.rotation.y += .05;
-//  absform.rotation.x += .05;
-//  absform.scale.x += .0;
-//  tahoe.position.x += -40;
-//  deathvalley.position.x += 40;
-  spikering.scale.x = 12;
-  spikering.scale.y = 12;
-  spikering.scale.z = 12;
-    spikering.rotation.x += .005;
-    spikering.rotation.z += .005;
-  cubering.scale.x = 11;
-  cubering.scale.y = 11;
-  cubering.scale.z = 11;
-    cubering.rotation.x += -.0025;
-    cubering.rotation.z += -.0025;
-    cubering.rotation.y += -.0025;
+  smile.scale.x = 12;
+  smile.scale.y = 12;
+  smile.scale.z = 12;
+  smile.rotation.y += .03;
+  smile.rotation.z += .002;
+    
+  stars.scale.x = 100;
+  stars.scale.y = 100;
+  stars.scale.z = 100;
+  stars.rotation.y += .0025;
+  stars.rotation.z += .0008; 
+  stars.rotation.x += .0008; 
+    
+  banana.scale.x = 2;
+  banana.scale.y = 2;
+  banana.scale.z = 2;
+  banana.rotation.y += .0025;
+  banana.rotation.z += .0008; 
+  banana.rotation.x += .0008; 
+    
+    
+  crate.scale.x = 1.2;
+  crate.scale.y = 1.2;
+  crate.scale.z = 1.2;
+  crate.rotation.y += .0005;
+  crate.rotation.z += .0034; 
+  crate.rotation.x += .0004;      
+    
+  
 
 
   requestAnimationFrame(animate);
@@ -206,6 +188,6 @@ window.addEventListener("resize", onWindowResize);
 
 //Orbit Controls
   controls = new THREE.OrbitControls( camera, renderer.domElement);
-  controls.minDistance = 20;
-  controls.maxDistance = 1000;
+  controls.minDistance = 190;
+  controls.maxDistance = 500;
 

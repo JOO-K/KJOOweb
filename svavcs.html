@@ -11,118 +11,184 @@
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="icon" href="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png">
 	</head>
 	<body>
 		
-		<nav>
-            <a href="index.html">
-            <div class="logo">
-                <h1>Kyung Hyun Joo</h1>
-                <hr>
-            </div>
-            </a>
-            
-            <div class="navmenu">
-                <br>
-                <div class="dropdown">
-                <button class="dropbtn">Digital</button>
-                <div class="dropdown-content">
-                    <a href="svavcs.html">SVA VCS 21'</a>
-                    <a href="arlettegeller.html">Arlette Geller</a>
-                    <a href="crackcouture.html">Crack Couture</a>
-                    <a href="khjexe.html">KHJ.EXE</a>
-                    <a href="worldfaire.html">19XX World Faire</a>
-                    <a href="discofortune.html">Disco Fortune</a>
-                </div>
-            </div>
-            <div class="dropdown2">
-                <button class="dropbtn">Print</button>
-                <div class="dropdown-content">
-                    <a href="koamstudy.html">Printmaking Study</a>
-                    <a href="posters.html">Posters</a>
-                    <a href="drawings.html">Drawings</a>
-                </div>
-            </div>
-            <div class="dropdown3">
-                <button class="dropbtn"><a href="doodles.html">Doodles</a></button>
-            </div>
-            </div>
-        </nav>
-        
-        <div class="mobiledropdown">
-                <button onclick="myFunction()" class="mobiledropbtn"><img src="images/menuicon.png"></button>
-                <div id="myDropdown" class="mobiledropdown-content">
-                <a href="index.html">
-                    <div class="logo">
-                        <h1>Kyung Hyun Joo</h1>
-                        <hr>
-                    </div>
-                </a>
-            
-                <div class="navmenu">
-                <h2>
-                    — is a <span id="gd">Graphic Designer</span> interested in web design and ui-ux. He enjoys making and curating novel web experiences using 3D media. Any questions can be directed towards <a href="mailto:kjoo@alumni.risd.edu">kjoo@alumni.risd.edu</a>. Check out his work through the links below. ᐁ  
-                </h2>
-                <div class="dropdown">
-                <button class="dropbtn">Digital</button>
-                <div class="dropdown-content">
-                    <a href="svavcs.html">SVA VCS 21'</a>
-                    <a href="arlettegeller.html">Arlette Geller</a>
-                    <a href="crackcouture.html">Crack Couture</a>
-                    <a href="khjexe.html">KHJ.EXE</a>
-                    <a href="worldfaire.html">19XX World Faire</a>
-                    <a href="discofortune.html">Disco Fortune</a>
-                </div>
-                </div>
-                <div class="dropdown2">
-                <button class="dropbtn">Print</button>
-                <div class="dropdown-content">
-                    <a href="koamstudy.html">Printmaking Study</a>
-                    <a href="posters.html">Posters</a>
-                    <a href="drawings.html">Drawings</a>
-                </div>
-                </div>
-                <div class="dropdown3">
-                    <button class="dropbtn"><a href="doodles.html">Doodles</a></button>
-                </div>
-                </div>
-                </div>
-            </div>
-        <script>
-           /* When the user clicks on the button,
-           toggle between hiding and showing the dropdown content */
-           function myFunction() {
-               document.getElementById("myDropdown").classList.toggle("show");
-           }
-
-          
-        </script>
+		<button id="buttonmenu" onclick="menuTrigger()" style="transform: translateX(-50vw);"><img src="images/circlegif.gif"></button> 
 		
-		<main>
-            <div class="navspacer"></div>
-            <div class="projectarea">
-                <div class="projectinfo">
-                    <div class="projecttitle"><h1>SVA Visual Critical Studies 21' Thesis Website</h1></div>
-                    <div class="projectdescript">
-                    <h2>
-                    <a href="https://logpup.github.io/vcs21web/" target="_blank">SVA VCS 21' Thesis website link</a>
-                    <br><br>
-                    The School of Visual Arts in New York needed a website for the exhibition of 2021 Visual Critical Studies senior theses. I worked with a group of designers and creators to make exhibition graphics and promotion material along with a responsive website showcasing student work. "3Dream Spiral_Relax" went live in January of 2021. 
-                    </h2></div>
-                </div>
-                <div class="imagebox">
-                    <img src="images/3dreamposter.png">
-                </div>
-                <div class="imagebox">
-                    <img src="images/vcsmock1.jpg">
-                </div>
-                <div class="imagebox">
-                    <img src="images/svavcs1.png">
-                </div>
+		<nav id="navmenu" style="transform: translateX(-50vw);">             
+            
+        <div class="container">
+		    <div class="khj">
+                <a href="index.html">
+		        <h1 id="homelink">Kyung Hyun Joo | <span id="koreanname">주경현</span></h1>
+		        </a>
+		        <h2>
+                    —is a <span id="gd">Graphic Designer</span> interested in web design and ui-ux. He enjoys making and curating novel web experiences using 3D media. Any questions can be directed towards <a href="mailto:kjoo@alumni.risd.edu">kjoo@alumni.risd.edu</a>. Look at his <a href="doodles.html">Doodles</a> and <a href="doodles.html">Posters</a> or check out his work through the links below. ᐁ  
+                </h2>
+		    </div>
+<!--
+		    <div class="profileimage">
+		        <img src="images/CCBottle.gif">
+		    </div>
+-->
+        </div>		    
+		    
+		    <div class="projects">
+                <a href="svavcs.html">
+		        <div class="box">
+		            <img src="images/3dreamposter.png">
+		            <div class="popuptext">
+		                <h3>SVA Visual Critical Studies 21'</h3>
+		            </div>
+		            
+		        </div>
+		        </a>
+		        
+		        <a href="arlettegeller.html">
+		        <div class="box">
+		            <img src="images/P1_SPEC1.png">
+		            <div class="popuptext">
+		                <h3>Arlette Geller</h3>
+		            </div>
+		        </div>
+		        </a>
+		      
+		        <a href="khjexe.html">
+		        <div class="box">
+		            <img src="images/khjexegif.gif">
+		            <div class="popuptext">
+		                <h3>Digital Time Capsule</h3>
+		            </div>
+		        </div>
+		        </a>
+		        
+		        <a href="worldfaire.html">
+		        <div class="box">
+		            <img src="images/wf1.png">
+		            <div class="popuptext">
+		                <h3>Virtual World Faire</h3>
+		            </div>
+		        </div>
+		        </a>
+		        
+		        <a href="crackcouture.html">
+		        <div class="box">
+		            <img src="images/CCBottle.gif">
+		            <div class="popuptext">
+		                <h3>Crack Couture</h3>
+		            </div>
+		        </div>
+		        </a>
+		        
+		        <a href="crackcouture.html">
+		        <div class="box">
+		            <img src="images/df4.png">
+		            <div class="popuptext">
+		                <h3>Disco Fortune</h3>
+		            </div>
+		        </div>
+		        </a>
+		        
+		        <a href="crackcouture.html">
+		        <div class="box">
+		            <img src="images/CCrabbit.png">
+		            <div class="popuptext">
+		                <h3>Good Salt Co.</h3>
+		            </div>
+		        </div>
+		        </a>
+		        
+		        <a href="crackcouture.html">
+		        <div class="box">
+		            <img src="images/feet.gif">
+		            <div class="popuptext">
+		                <h3>Good Salt Co.</h3>
+		            </div>
+		        </div>
+		        </a>
+		        <br><br><br>
+		    </div>
+		</nav>
+		
+		
+		<div class="projectcontainer">
+            <div class="mainphoto">
+                <img src="images/3dreamposter.png">
             </div>
-            <div class="footer"></div>
-        </main>
+		    <div class="projecttitle">
+		        <h1>School of Visual Arts— Visual Critical Studies Senior Thesis Show Website</h1>
+		    </div>
+		    <div class="descontainer">
+		    
+		    <div class="projectskills">
+		        <h3>
+		        Skills:<br>
+                Adobe Creative Cloud<br>
+                Blender Eevee<br>
+                Three.js<br>
+                Cost analysis<br>
+		            
+		        </h3>
+		    </div>
+		    
+		    <div class="projectdescription">
+		        <h2>The School of Visual Arts in New York needed a website for the exhibition of 2021 Visual Critical Studies senior theses. I worked with a group of designers and creators to make exhibition graphics and promotion material along with a responsive website showcasing student work. "3Dream Spiral_Relax" went live in January of 2021.
+		        </h2>
+		    </div>  
+		    </div>
+		</div>
+        
+        
+        <div class="scrollbar">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+        
+        
+        <script>
+            window.onscroll = function() {myFunction()};
+                function myFunction() {
+                    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    var scrolled = (winScroll / height) * 100;
+                    document.getElementById("myBar").style.width = scrolled + "%";
+                }
+        </script>
+        
+         <!-- tilt.js -->
+                <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+                <script type="text/javascript">
+                    VanillaTilt.init(document.querySelectorAll(".box"), {
+                        reverse: true,
+                        max: 20,
+                        speed: 1000,
+                        perspective: 1000,
+                        scale: 1.05
+	            });
+                </script>    
+        
+                <!-- Nav Close/Open Button -->
+                <script>
+                    function menuTrigger() {
+                        var x = document.getElementById("navmenu");
+                        var y = document.getElementById("buttonmenu");
+                        if (x.style.transform == "translateX(-50vw)") {
+                            window.scrollTo(0, 0);
+                            x.style.transform = "translateX(0vw)";
+                            y.style.transform = "translateX(0vw)";
+                            y.style.position = "fixed";
+                            } else {
+                            x.style.transform = "translateX(-50vw)";
+                            y.style.transform = "translateX(-50vw)";
+                            y.style.position = "fixed";
+                            }
+                    }
+                </script> 
         
     </body>
