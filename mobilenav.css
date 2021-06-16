@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: Supply;
-    src: url("fonts/Supply-UltraLight.otf") format("opentype");
+    src: url("fonts/Supply-Regular.otf") format("opentype");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
 }
 
 #mobilenav{
-    width: 80vw;
+    width: 100vw;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -30,88 +30,83 @@
     display: none;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 800px) {
     #mobilenav{
         display: block;
     }
 }
 
 #mobilebutton{
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     position: fixed;
-    left: 50vw;
+    left: 85vw;
     top 0px;
     padding: 0px;
     border: none;
-    border-radius: 0px 200px 200px 0px;
+    border-radius: 0px 0px 20px 0px;
     color: white;
     z-index: 50000;
     transition: .8s;
     background-color: transparent;
-    
+    display:none;
 }
 
-button img{
+@media all and (max-width: 800px) {
+    #mobilebutton{
+        display: block;
+    }
+}
+
+#mobilebutton img{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 0px 200px 200px 0px;
-/*    animation: 4s powerspin infinite;*/
-/*    filter: invert(1);*/
+    border-radius: 0px 0px 0px 20px;
+    /*    animation: 4s powerspin infinite;*/
+    /*    filter: invert(1);*/
     filter:  saturate(0) contrast(1.1) invert(0);
     transition: .3s;
     cursor: pointer;
     margin: 0px;
-   
 }
-
-
 
 @keyframes powerspin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-html{
-   scroll-behavior: smooth;
-   height: 100%;
+#mobbutton img:hover{
+    filter: saturate(1) contrast(2) invert(1);
 }
 
-button img:hover{
-   filter: saturate(1) contrast(2) invert(1);
-   border: 1px solid white;
-   border-width: 1px 5px 10px 0px;
-}
-
-.container{
+.mobcontainer{
     display: flex;
 }
 
-.khj{
+.mobkhj{
     width: 100%;
     background-color: transparent;
     padding: 0px;
-    margin: 0px;
+    margin: 30px 0px 0px 0px;
+    text-align: center;
 }
 
-#homelink{
+#mobhomelink{
     color: black;
     font-family: "Syne";
     font-size: 30px;
-    margin: 1.8vw 2vw 0vw 2vw;
-    padding: 0px;
     animation: 1.5s loadintext;
     transform-origin: bottom;
     transition: .05s;
 }
 
-#homelink:hover{
-   color: limegreen;
+#mobhomelink:hover{
+    color: limegreen;
 }
 
 #koreanname{
@@ -120,40 +115,42 @@ button img:hover{
 }
 
 @keyframes loadintext {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.khj h2{
-    font-family: "space mono";
+.mobkhj h2{
+    font-family: "supply";
     font-size: 13px;
-    line-height: 20px;
-    padding: 1vw 2vw 1vw 2vw;
+    line-height: 22px;
+    padding: 0vw 10vw 5vw 10vw;
     margin: 0px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /*
 .profileimage{
-    width: 20%;
-    padding-bottom: .75vw;
-    margin: 0px;
-    
+width: 20%;
+padding-bottom: .75vw;
+margin: 0px;
+
 }
 
 .profileimage img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0px 0px 0px 50px;
-    filter: grayscale(100%) contrast(100%);
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 0px 0px 0px 50px;
+filter: grayscale(100%) contrast(100%);
 }
 */
 
-.projects{
+.mobprojects{
     width: 100%;
     background-color: transparent;
     margin: 0px;
@@ -165,19 +162,19 @@ a{
     text-decoration: none;
 }
 
-.box{
+.mobbox{
     display: inline-block;
-    width: 22vw;
+    width: 80vw;
     min-width: 200px;
-    height: 22vh;
+    height: 30vh;
     border-radius: 30px;
     padding: 0px;
-    margin: 1vw;
+    margin: 5vw;
     transform-style: preserve-3d;
     text-align: center;
 }
 
-.box img{
+.mobbox img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -187,11 +184,11 @@ a{
     transition: .5s;  
 }
 
-.box img:hover{
+.mobbox img:hover{
     filter: grayscale(0%);
 }
 
-.box .popuptext{
+.mobbox .mobpopuptext{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -202,26 +199,26 @@ a{
     pointer-events: none; 
 }
 
-.box .popuptext h3{
+.mobbox .mobpopuptext h3{
     font-family: "Syne";
-    font-size: 2vw;
+    font-size: 25px;
     pointer-events: none; 
     text-shadow: 2px 2px #00690c;
     color: #41fc03;
 }
 
-.box:hover .popuptext{
+.mobbox:hover .mobpopuptext{
     transform: translate(-50%, -50%) translateZ(50px) scaleY(1);
     z-index: 10;
 }
 
-.box img:hover {
+.mobbox img:hover {
     box-shadow: 0px 0px 30px rgba(10,255,50,1.0);
     z-index: 10;
     cursor: pointer;
 }
 
-nav h2{
+.mobilenav h2{
     font-family: "space mono";
     font-size: 15px;
     line-height: 22px;

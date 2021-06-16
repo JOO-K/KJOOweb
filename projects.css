@@ -3,9 +3,23 @@
     margin: 0vw 15vw 0vw 15vw;
 }
 
+@media all and (max-width: 800px) {
+    .projectcontainer{
+        width: 100vw;
+        margin: 0vw 0vw 0vw 0vw;
+    }
+}
+
 .mainphoto{
     width: 70vw;
     height: 50vh;
+}
+
+@media all and (max-width: 800px) {
+    .mainphoto{
+        width: 100vw;
+        height: 40vh;
+    }
 }
 
 .mainphoto img{
@@ -26,35 +40,116 @@
     padding: 20px 10vw 15px 10vw;
 }
 
+@media all and (max-width: 800px) {
+    .projecttitle h1{
+        font-family: "Syne";
+        font-size: 20px;
+        line-height: 30px;
+        padding: 20px 10vw 15px 10vw;
+    }
+}
+
 .descontainer{
     padding: 0px 0vw 0px 0vw;
+}
+
+@media all and (max-width: 800px) {
+    .descontainer{
+        padding: 0px 30px 30px 30px;
+    }
 }
 
 .projectdescription{
     float: left;
     width: 75%;
-    
+    margin-bottom: 50px;
+}
+
+@media all and (max-width: 800px) {
+    .projectdescription{
+        width: 100%;
+    }
 }
 
 .projectdescription h2{
-    font-family: "Lora";
+    font-family: "Roboto";
     font-size: 15px;
     line-height: 25px;
-    text-justify: auto;   
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 40px;
 }
+
+@media all and (max-width: 800px) {
+    .projectdescription h2{
+        text-indent: 0px;
+    }
+}
+
 
 .projectskills{
     float: left;
     width: 25%;
-  
+
+}
+
+@media all and (max-width: 800px) {
+    .projectskills{
+       display: none;
+    }
 }
 
 .projectskills h3{
     text-align: left;
-    font-family: "Lora";
-    font-size: 13px;
-    line-height: 20px;
+    font-family: "Supply";
+    font-size: 15px;
+    line-height: 24px;
 }
+
+
+
+.photosmall{
+    width: 49%;
+    height: 25vw;
+    float: left;
+    margin-bottom: 50px;
+    
+}
+
+@media all and (max-width: 800px) {
+    .photosmall{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.photosmall img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photolarge{
+    width: 50vw;
+    float: left;
+    margin: 0vw 10vw 50px 10vw;
+}
+
+.photolarge img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left{
+    padding-right: 1%;
+}
+
+.right{
+    padding-left: 1%;
+}
+
+ 
 
 
 
