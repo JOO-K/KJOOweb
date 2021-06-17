@@ -1,7 +1,10 @@
+var canvasdraw;
+
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  canvasdraw = createCanvas(displayWidth, displayHeight);
   strokeWeight(8);
   stroke(0,255,50);
+  canvasdraw.style("z-index: -100");
 }
 
 function touchMoved() {
