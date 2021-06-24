@@ -35,8 +35,8 @@
 
 .projecttitle h1{
     font-family: "Syne";
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 45px;
     padding: 20px 10vw 15px 10vw;
 }
 
@@ -71,19 +71,52 @@
     }
 }
 
+.projectdescription h1{
+    font-family: "Hatton";
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    
+    padding-top: -10px;
+    padding-bottom: 30px;
+}
+
 .projectdescription h2{
-    font-family: "Roboto";
-    font-size: 15px;
+    font-family: "Replica";
+    font-size: 15.5px;
     line-height: 25px;
+    font-weight: 300;
     text-align: justify;
     text-justify: inter-word;
     text-indent: 40px;
+}
+
+.projectdescription h3{
+    font-family: "Replica";
+    font-size: 15.5px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-top: 0px;
 }
 
 @media all and (max-width: 800px) {
     .projectdescription h2{
         text-indent: 0px;
     }
+}
+
+.centerdescription{
+    float: left;
+    width: 60%;
+    margin: 0px 15vw 50px 15vw;
+}
+
+.centerdescription h2{
+    font-family: "Replica";
+    font-size: 15.5px;
+    line-height: 25px;
+    font-weight: 300;
+    text-align: center;
 }
 
 
@@ -101,9 +134,10 @@
 
 .projectskills h3{
     text-align: left;
-    font-family: "Supply";
-    font-size: 15px;
-    line-height: 24px;
+    font-family: "space mono";
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 25px;
 }
 
 
@@ -130,12 +164,24 @@
 }
 
 .photolarge{
+    width: 30vw;
+    float: left;
+    margin: 0vw 20vw 50px 20vw;
+}
+
+.photolarge img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photowide{
     width: 50vw;
     float: left;
     margin: 0vw 10vw 50px 10vw;
 }
 
-.photolarge img{
+.photowide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -148,6 +194,33 @@
 .right{
     padding-left: 1%;
 }
+
+.homeback{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    text-align: right;
+}
+
+.homeback a{
+   color: black;
+   
+}
+
+.homeback h1{
+    font-family: "Major Mono Display";
+    font-size: 2.6vw;
+    line-height: 20px;
+    text-transform: lowercase;
+    transition: .3s;
+}
+
+.homeback h1:hover{
+   color: limegreen;
+   text-transform: uppercase;
+}
+
+
 
  
 

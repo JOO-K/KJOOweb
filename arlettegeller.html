@@ -1,141 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>K H J</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <head>
+        <title>K H J</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link type="text/css" rel="stylesheet" href="nav.css">
+        <link type="text/css" rel="stylesheet" href="mobilenav.css">
         <link type="text/css" rel="stylesheet" href="projects.css">
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="icon" href="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png">
-        <link
-	</head>
-	<body>
-		
-		<nav>
-            <a href="index.html">
-            <div class="logo">
-                <h1>Kyung Hyun Joo</h1>
-                <hr>
-            </div>
-            </a>
-            
-            <div class="navmenu">
-                <br>
-                <div class="dropdown">
-                <button class="dropbtn">Digital</button>
-                <div class="dropdown-content">
-                    <a href="svavcs.html">SVA VCS 21'</a>
-                    <a href="arlettegeller.html">Arlette Geller</a>
-                    <a href="crackcouture.html">Crack Couture</a>
-                    <a href="khjexe.html">KHJ.EXE</a>
-                    <a href="worldfaire.html">19XX World Faire</a>
-                    <a href="discofortune.html">Disco Fortune</a>
+    </head>
+    <body>
+
+        <button id="buttonmenu" style="transform: translateX(-50vw)" onclick="menuTrigger()"><img src="images/circlegif.gif"></button> 
+
+        <button id="mobilebutton" onclick="mobileTrigger()"><img src="images/circlegif.gif"></button> 
+
+         <nav id="navmenu" style="transform: translateX(-50vw)">             
+
+            <div class="container">
+                <div class="khj">
+                    <a href="index.html">
+                        <h1 id="homelink">Kyung Hyun Joo | <span id="koreanname">주경현</span></h1>
+                    </a>
+                    <h2>
+                        —is a <span id="gd">Graphic Designer</span> interested in web design and ui-ux. He enjoys making and curating novel web experiences using 3D media. Any questions can be directed towards <a href="mailto:kjoo@alumni.risd.edu">kjoo@alumni.risd.edu</a>. Look at his <a href="doodles.html">Doodles</a> and <a href="posters.html">Posters</a> or check out his work through the links below. ᐁ  
+                    </h2>
                 </div>
-            </div>
-            <div class="dropdown2">
-                <button class="dropbtn">Print</button>
-                <div class="dropdown-content">
-                    <a href="koamstudy.html">Printmaking Study</a>
-                    <a href="posters.html">Posters</a>
-                    <a href="drawings.html">Drawings</a>
-                </div>
-            </div>
-            <div class="dropdown3">
-                <button class="dropbtn"><a href="doodles.html">Doodles</a></button>
-            </div>
-            </div>
-        </nav>
-        
-        <div class="mobiledropdown">
-                <button onclick="myFunction()" class="mobiledropbtn"><img src="images/menuicon.png"></button>
-                <div id="myDropdown" class="mobiledropdown-content">
-                <a href="index.html">
-                    <div class="logo">
-                        <h1>Kyung Hyun Joo</h1>
-                        <hr>
+                <!--
+<div class="profileimage">
+<img src="images/CCBottle.gif">
+</div>
+-->
+            </div>		    
+
+
+            <div class="projects">
+                <a href="svavcs.html">
+                    <div class="box">
+                        <img src="images/svalogo.png">
+                        <div class="popuptext">
+                            <h3>School of Visual Arts</h3>
+                        </div>
+
                     </div>
                 </a>
-            
-                <div class="navmenu">
-                <h2>
-                    — is a <span id="gd">Graphic Designer</span> interested in web design and ui-ux. He enjoys making and curating novel web experiences using 3D media. Any questions can be directed towards <a href="mailto:kjoo@alumni.risd.edu">kjoo@alumni.risd.edu</a>. Check out his work through the links below. ᐁ  
-                </h2>
-                <div class="dropdown">
-                <button class="dropbtn">Digital</button>
-                <div class="dropdown-content">
-                    <a href="svavcs.html">SVA VCS 21'</a>
-                    <a href="arlettegeller.html">Arlette Geller</a>
-                    <a href="crackcouture.html">Crack Couture</a>
-                    <a href="khjexe.html">KHJ.EXE</a>
-                    <a href="worldfaire.html">19XX World Faire</a>
-                    <a href="discofortune.html">Disco Fortune</a>
-                </div>
-                </div>
-                <div class="dropdown2">
-                <button class="dropbtn">Print</button>
-                <div class="dropdown-content">
-                    <a href="koamstudy.html">Printmaking Study</a>
-                    <a href="posters.html">Posters</a>
-                    <a href="drawings.html">Drawings</a>
-                </div>
-                </div>
-                <div class="dropdown3">
-                    <button class="dropbtn"><a href="doodles.html">Doodles</a></button>
-                </div>
-                </div>
-                </div>
-            </div>
-        <script>
-           /* When the user clicks on the button,
-           toggle between hiding and showing the dropdown content */
-           function myFunction() {
-               document.getElementById("myDropdown").classList.toggle("show");
-           }
 
-          
-        </script>
-		
-		<main>
-            <div class="navspacer"></div>
-            <div class="projectarea">
-                <div class="projectinfo">
-                    <div class="projecttitle"><h1>Arlette Geller</h1></div>
-                    <div class="projectdescript">
-                    <h2>
-                    <a href="https://arlettegeller.com/" target="_blank">Link to ArletteGeller.com</a>
-                    <br><br>
-                    Arlette is a biomedical engineer that makes use of CAD software to prototype and 3D-print her work. A redesign of her website was necessary to accommodate and display the type of work she dealt with. The website redesign features product renders and a CAD model viewer within the browser.
-                    <br><br>
-                    Viewer created through Three.js, Renders done through Blender.
-                    </h2></div>
-                </div>
-                <div class="imagebox">
-                    <img src="images/AGdesktop.jpg">
-                </div>
-                <div class="imagebox">
-                    <img src="images/ag2.png">
-                </div>
-                <div class="imagebox">
-                    <img src="images/agmock1.jpg">
-                </div>
-                <div class="imagebox">
-                    <img src="images/P1_MITRAL1.png">
-                </div>
-                <div class="imagebox">
-                    <img src="images/P1_SPEC1.png">
-                </div>
-                <div class="imagebox">
-                    <img src="images/P1_SPEC2.png">
-                </div>
+                <a href="arlettegeller.html">
+                    <div class="box">
+                        <img src="images/agicon2.png">
+                        <div class="popuptext">
+                            <h3>Arlette Geller</h3>
+                        </div>
+                    </div>
+                </a>
                 
+                <a href="crackcouture.html">
+                    <div class="box">
+                        <img src="images/cclogoindex.png">
+                        <div class="popuptext">
+                            <h3>Crack Couture</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="khjexe.html">
+                    <div class="box">
+                        <img src="images/timecapsule.png">
+                        <div class="popuptext">
+                            <h3>Digital Time Capsule</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="worldfaire.html">
+                    <div class="box">
+                        <img src="images/wf1.png">
+                        <div class="popuptext">
+                            <h3>Virtual World Faire</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="goodsaltco.html">
+                    <div class="box">
+                        <img src="images/newncal.jpg">
+                        <div class="popuptext">
+                            <h3>Good Salt Co.</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="discofortune.html">
+                    <div class="box">
+                        <img src="images/df4.png">
+                        <div class="popuptext">
+                            <h3>Game Design</h3>
+                        </div>
+                    </div>
+                </a>
+
+                
+                <br><br><br>
+
             </div>
-            <div class="footer"></div>
-        </main>
+            <div class="navspacer"></div>
+            <h2>© Kyung Hyun Joo 2021 (kyung.xyz)</h2>
+</nav>
+
+        <nav id="mobilenav" style="transform: translateX(-100vw)">             
+
+            <div class="mobcontainer">
+                <div class="mobkhj">
+                    <a href="index.html">
+                        <h1 id="mobhomelink">Kyung Hyun Joo</h1>
+                    </a>
+                    <h2>
+                        —is a <span id="gd">Graphic Designer</span> interested in web design and ui-ux. He enjoys making and curating novel web experiences using 3D media. Any questions can be directed towards <a href="mailto:kjoo@alumni.risd.edu">kjoo@alumni.risd.edu</a>. Look at his <a href="doodles.html">Doodles</a> and <a href="posters.html">Posters</a> or check out his work through the links below. ᐁ  
+                    </h2>
+                </div>
+                <!--
+<div class="profileimage">
+<img src="images/CCBottle.gif">
+</div>
+-->
+            </div>		    
+
+
+            <div class="mobprojects">
+                <a href="svavcs.html">
+                    <div class="mobbox">
+                        <img src="images/svalogo.png">
+                        <div class="mobpopuptext">
+                            <h3>School of Visual Arts</h3>
+                        </div>
+
+                    </div>
+                </a>
+
+                <a href="arlettegeller.html">
+                    <div class="mobbox">
+                        <img src="images/agicon2.png">
+                        <div class="mobpopuptext">
+                            <h3>Arlette Geller</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="crackcouture.html">
+                    <div class="mobbox">
+                        <img src="images/cclogoindex.png">
+                        <div class="mobpopuptext">
+                            <h3>Crack Couture</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="khjexe.html">
+                    <div class="mobbox">
+                        <img src="images/timecapsule.png">
+                        <div class="mobpopuptext">
+                            <h3>Digital Time Capsule</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="worldfaire.html">
+                    <div class="mobbox">
+                        <img src="images/wf1.png">
+                        <div class="mobpopuptext">
+                            <h3>Worlde Faire</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="goodsaltco.html">
+                    <div class="mobbox">
+                        <img src="images/newncal.jpg">
+                        <div class="mobpopuptext">
+                            <h3>Good Salt Co.</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="discofortune.html">
+                    <div class="mobbox">
+                        <img src="images/df4.png">
+                        <div class="mobpopuptext">
+                            <h3>Game Design</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <br><br><br>
+
+            </div>
+            <h2>© Kyung Hyun Joo 2021 (kyung.xyz)</h2>
+            <br><br><br>
+        </nav>
+
+        <div class="projectcontainer">
+            <div class="mainphoto">
+                <img src="images/P1_SPEC1.png">
+            </div>
+            <div class="projecttitle">
+                <h1>Arlette Geller — Biomedical Engineering</h1>
+            </div>
+            <div class="descontainer">
+                <div class="projectskills">
+                    <h3>
+                        Skills:<br>
+                        Adobe Photoshop<br>
+                        XD/Figma/Sketch<br>
+                        Autodesk Fusion 360<br>
+                        Blender Cycles<br>
+                        Three.js
+                        
+
+                    </h3>
+                </div>
+
+                <div class="projectdescription">
+                    <h1>"—inspired to design, develop, and manufacture biomedical instruments to improve the quality and elongate the expectancy of human lives." -AG</h1>
+                   
+                    <a href="https://arlettegeller.com/" target="_blank"><h3>https://arlettegeller.com/</h3></a>
+                                      
+                    <h2>
+                        
+                         In collaboration with Arlette Geller, a biomedical engineer at Duke University, I helped design and launch a website displaying her various designs for medical instruments. Arlette makes use of CAD software such as 3DS Max and AutoCAD to prototype and 3D-print her work. The website needed to accommodate and display these 3D objects in a more accessible manner, as well as display final renders for product use. With the use of Blender, an open source 3D Computer Graphics program, I created high quality renders of Arlette's designs to be featured throughout the website.
+         
+                    </h2>
+                </div>  
+            </div>
+            
+            <div class="photowide">
+                <img src="images/AGbusinesscards.jpg">
+            </div>
+            
+            <div class="photowide">
+                <img src="images/AGphonemock.jpg">
+            </div>
+            
+            
+            <div class="descontainer">
+                <div class="centerdescription">
+                    <h2>3D Object Rendering
+                    </h2>
+                </div>  
+            </div>
+            
+            <div class="photosmall left">
+                <img src="images/P1_SPEC1.png">
+            </div>
+            <div class="photosmall right">
+                <img src="images/P1_SPEC2.png">
+            </div>
+            
+            <div class="photosmall left">
+                <img src="images/P1_CYST2.png">
+            </div>
+            <div class="photosmall right">
+                <img src="images/P1_MITRAL1.png">
+            </div>
+            
+            <div class="descontainer">
+                <div class="centerdescription">
+                    <h2>Web Flow and Prototyping
+                    </h2>
+                </div>  
+            </div>
+            
+            <div class="photosmall left">
+                <img src="images/ag1.png">
+            </div>
+            <div class="photosmall right">
+                <img src="images/AGproto1.png">
+            </div>
+            
         
+            
+            
+            
+        </div>
+        
+        <div class="homeback">
+            <a href="index.html"><h1>Home</h1></a>
+            <a href="crackcouture.html"><h1>Next</h1></a>
+        </div>
+        
+        <footer></footer>
+
+        <div class="scrollbar">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+
+        <!-- tilt.js -->
+        <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".box"), {
+                reverse: true,
+                max: 20,
+                speed: 1000,
+                perspective: 1000,
+                scale: 1.05
+            });
+        </script>    
+
+        <!-- Nav Close/Open Button -->
+        <script>
+            function menuTrigger() {
+                var x = document.getElementById("navmenu");
+                var y = document.getElementById("buttonmenu");
+                if (x.style.transform == "translateX(-50vw)") {
+                    window.scrollTo(0, 0);
+                    x.style.transform = "translateX(0vw)";
+                    x.style.boxShadow = "10px 10px 40px green";
+                    y.style.transform = "translateX(0vw)";
+                    y.style.position = "fixed";
+                } else {
+                    x.style.transform = "translateX(-50vw)";
+                    x.style.boxShadow = "0px 0px 0px green";
+                    y.style.transform = "translateX(-50vw)";
+                    y.style.position = "fixed";
+                }
+            }
+        </script> 
+        
+        <script>
+            function mobileTrigger() {
+                var x = document.getElementById("mobilenav");
+                var y = document.getElementById("mobilebutton");
+                if (x.style.transform == "translateX(-100vw)") {
+                    window.scrollTo(0, 0);
+                    x.style.transform = "translateX(0vw)";
+                    y.style.transform = "translateX(0vw)";
+                    y.style.position = "fixed";
+                } else {
+                    x.style.transform = "translateX(-100vw)";
+                    y.style.transform = "translateX(-0vw)";
+                    y.style.position = "fixed";
+                }
+            }
+        </script>
+
     </body>

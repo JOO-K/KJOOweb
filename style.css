@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: Replica;
+    src: url("fonts/Replica-Regular.otf") format("opentype");
+}
+
+@font-face {
     font-family: Supply;
     src: url("fonts/Supply-Regular.otf") format("opentype");
 }
@@ -115,8 +120,8 @@ a:link{
     color: white;
     font-family: "gaegu";
     font-size: 25px;
-    padding: 0px;
-    margin: 0px;
+    padding-top: 20px;
+    margin: 0px;Wire
     line-height: 5px;
 }
 
