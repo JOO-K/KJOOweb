@@ -125,6 +125,19 @@ function init() {
         crate = gltf.scene;
         animate();
     });   
+    
+    loader.load("obj/hello.gltf", function(gltf) {
+        scene.add(gltf.scene);
+        hello = gltf.scene;
+        animate();
+    }); 
+    
+    loader.load("obj/exes.gltf", function(gltf) {
+        scene.add(gltf.scene);
+        exes = gltf.scene;
+        animate();
+    }); 
+
 
 }
 
@@ -170,6 +183,19 @@ function animate() {
     crate.rotation.z += .0034; 
     crate.rotation.x += .0004;      
 
+    hello.scale.x = 1.2;
+    hello.scale.y = 1.2;
+    hello.scale.z = 1.2;
+    hello.rotation.y += .0005;
+    hello.rotation.z += .0034; 
+    hello.rotation.x += .0004;      
+
+    exes.scale.x = 1.2;
+    exes.scale.y = 1.2;
+    exes.scale.z = 1.2;
+    exes.rotation.y += .0005;
+    exes.rotation.z += .0034; 
+    exes.rotation.x += .0004;   
 
 
 
