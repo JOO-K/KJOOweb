@@ -218,6 +218,13 @@
     text-align: right;
 }
 
+@media all and (max-width: 800px) {
+    .homeback{
+        display: none;
+    }
+}
+
+
 .homeback a{
    color: black;
    
