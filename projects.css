@@ -43,8 +43,8 @@
 @media all and (max-width: 800px) {
     .projecttitle h1{
         font-family: "Syne";
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 30px;
+        line-height: 38px;
         padding: 20px 10vw 15px 10vw;
     }
 }
@@ -173,6 +173,7 @@
     .photolarge{
         width: 100%;
         height: 100%;
+        margin: 0vw 0vw 50px 0vw;
     }
 }
 
@@ -192,6 +193,7 @@
     .photowide{
         width: 100%;
         height: 100%;
+        margin: 0vw 0vw 50px 0vw;
     }
 }
 
