@@ -169,6 +169,13 @@
     margin: 0vw 20vw 50px 20vw;
 }
 
+@media all and (max-width: 800px) {
+    .photolarge{
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .photolarge img{
     width: 100%;
     height: 100%;
@@ -179,6 +186,13 @@
     width: 50vw;
     float: left;
     margin: 0vw 10vw 50px 10vw;
+}
+
+@media all and (max-width: 800px) {
+    .photowide{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .photowide img{
