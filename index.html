@@ -284,6 +284,15 @@
                     y.style.transform = "translateX(-50vw)";
                     y.style.position = "fixed";
                 }
+                
+                window.addEventListener('click', function(e){   
+                if (document.getElementById('navmenu').contains(e.target)){
+                    // Clicked in box
+                } else{
+                    // Clicked outside the box
+                menuTrigger();
+                }
+                });
             }
         </script> 
         
@@ -301,7 +310,13 @@
                     y.style.transform = "translateX(-0vw)";
                     y.style.position = "fixed";
                 }
+                
+
+                
             }
+            
+            
+          
         </script>
         
         
