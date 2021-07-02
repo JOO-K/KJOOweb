@@ -185,6 +185,13 @@ footer{
 
 }
 
+@media all and (max-width: 1000px) {
+    .controls{
+        display:none;
+    }
+}
+
+
 .controls img{
     width: 150px;
 }
