@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>kyung.xyz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="projects.css">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <!--        <script src="js/preload.js"></script>-->
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="khj">
+                <a href="index.html" class="khjbutton"><h1 id="khj">eric joo</h1></a>
+            </div>
+
+            <div class="links">
+
+                <h2>(626) 607-6118</h2>
+                <a href="mailto:kjoo@alumni.risd.edu"><h2>kjoo@alumni.risd.edu</h2></a>
+                <h2>RISD -> LA &#9679;  Graphic &amp; Web Design</h2>
+
+            </div>
+        </nav>
+
+        <div class="mobilenav">
+            <div class="projectkhj">
+                <a href="index.html" class="khjbutton"><h1 id="projectkhj">eric joo</h1></a>
+            </div>
+            <div class="plus">
+                <h1><span onclick="openNav()">+</span></h1>
+            </div>
+
+            <div id="myNav" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><h1>x</h1></a>
+
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <a href="#">ericjoo</a>
+                    <a href="#">OHT NYC</a>
+                    <a href="#">Crack Couture</a>
+                    <a href="#">SVA-VCS</a>
+                    <a href="#">Arlette Geller</a>
+                    <a href="#">Digital Time Capsule</a>
+                    <a href="#">Virtual Gallery</a>
+                    <a href="#">Sketches</a>
+                    <a href="#">Posters</a>
+                    <a href="#">Contact</a>
+                    
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="projectcontainer">
+            <h1>OHT NYC Fashion &amp; Jewelry<br>E-Commerce Website</h1>
+
+            <h2>OHTNYC &#9679; 2021</h2>
+
+            <div class="skills">
+                <h2>
+                    Skills:<br>
+                    Shopify Liquid<br>
+                    Adobe Creative Suite<br>
+                    Figma<br>
+                    Javascript
+                </h2>
+            </div>
+
+            <h3>"Ambrosia Lite..."<br>-OHT</h3>
+
+            <div class="projdescription">
+                <p>Designed and launched a redesign of OHTNYC's E-Commerce website.</p>
+            </div>
+
+            <div class="photosmall">
+                <img src="imgs/3dreamposter.png">
+            </div>
+            <div class="photosmall">
+                <img src="imgs/3dreamposter.png">
+            </div>
+
+
+            <div class="photowide">
+                <img src="imgs/bigrockalone.jpg">
+            </div>
+
+        </div>
+
+        <!--  Typewriter.js  -->
+        <script>
+            var app = document.getElementById('khj');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 75,
+            });
+
+            typewriter
+                .typeString('eric joo')
+                .pauseFor(10000)
+                .deleteChars(10)
+                .typeString('hello')
+                .pauseFor(500)
+                .deleteChars(10)
+                .typeString(':-) :-) :-)')
+                .pauseFor(500)
+                .deleteChars(10)
+                .start();
+        </script>
+        
+        <script>
+            var app = document.getElementById('projectkhj');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 75,
+            });
+
+            typewriter
+                .typeString('eric joo')
+                .pauseFor(10000)
+                .deleteChars(10)
+                .typeString('hello')
+                .pauseFor(500)
+                .deleteChars(10)
+                .typeString(':-) :-) :-)')
+                .pauseFor(500)
+                .deleteChars(10)
+                .start();
+        </script>
+        
+        <script>
+            /* Open */
+            function openNav() {
+                document.getElementById("myNav").style.display = "block";
+            }
+
+            /* Close */
+            function closeNav() {
+                document.getElementById("myNav").style.display = "none";
+            }
+        </script>
+    </body>
+
+</html>

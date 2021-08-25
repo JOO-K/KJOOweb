@@ -1,32 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <title>k h j - ㅈㄱㅎ</title>
+        <title>kjoo design</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style.css">
-        <link type="text/css" rel="stylesheet" href="nav.css">
-        <link type="text/css" rel="stylesheet" href="mobilenav.css">
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">  
-        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-        <link rel="icon" href="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png">
-        <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.min.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-371QLVE4ZH"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <link rel="icon" type="image/png" href="imgs/frogfav.png">
 
-            gtag('config', 'G-371QLVE4ZH');
-        </script>
-<!--        <script type="text/javascript" src="js/sketch.js"></script>-->
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <!--        <script src="js/preload.js"></script>-->
     </head>
+
     <body>
-        <h1></h1>
+
+        <nav>
+            <div class="khj">
+                <a href="index.html" class="khjbutton"><h1 id="khj">eric joo</h1></a>
+
+                <div class="hiddencontainer Profile">
+                    <img src="imgs/profileimage.jpg">
+                    <h3>Me<br>SUMMER 2021</h3>
+                </div>
+            </div>
+
+            <div class="links">
+
+                <h2>(626) 607-6118</h2>
+                <a href="mailto:kjoo@alumni.risd.edu"><h2>kjoo@alumni.risd.edu</h2></a>
+                <h2>RISD -> LA &#9679;  Graphic &amp; Web Design</h2>
+                <h2>Studio Dryclean &#9679; HOD</h2>
+
+            </div>
+
+            <div class="formcontainer">
+                <form action="action_page.php">
+
+                    <label for="fname"></label>
+                    <input type="text" id="fname" name="firstname" placeholder="Name">
+
+                    <label for="subject"></label>
+                    <textarea id="subject" name="subject" placeholder="Questions?                     Leave a message" style="height:150px"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </nav>
+        
+        <div class="mobilenav">
+            <div class="mobilekhj">
+                <a href="index.html" class="khjbutton"><h1 id="mobilekhj">eric joo</h1></a>
+            </div>
+            
+            <div class="links">
+
+                <h2>(626) 607-6118</h2>
+                <a href="mailto:kjoo@alumni.risd.edu"><h2>kjoo@alumni.risd.edu</h2></a>
+                <h2>RISD -> LA &#9679;  Graphic &amp; Web Design</h2>
+
+            </div>
+        </div>
+
+
+        
+
+        <div class="container">
+
+            <a href="OHT.html" class="OHTbutton">
+                <div class="card">
+                    <img src="imgs/OHTLogo.png">
+                </div>
+            </a>
+            <div class="hiddencontainer OHT">
+                <img src="imgs/OHTphoto.jpeg">
+                <h3>OHT e-commerce website<br>SUMMER 2021</h3>
+            </div>
+
+
+            <a href="CC.html" class="CCbutton">
+                <div class="card">
+                    <img src="imgs/CCLogo.png">
+                </div>
+            </a>
+            <div class="hiddencontainer CC">
+                <img src="imgs/CCrabbit.png">
+                <h3>CC e-commerce graphics<br>SPRING 2021</h3>
+            </div>
+
+            <a href="SVA.html" class="SVAbutton">
+                <div class="card">
+                    <img src="imgs/SVALOGOsmaller.png">
+                </div>
+            </a>
+            <div class="hiddencontainer SVA">
+                <img src="imgs/3dreamposter.png">
+                <h3>SVA online art show<br>SPRING 2021</h3>
+            </div>
+
+            <a href="AG.html" class="AGbutton">
+                <div class="card">
+                    <img src="imgs/AGLogo.png">
+                </div>
+            </a>
+            <div class="hiddencontainer AG">
+                <img src="imgs/agicon2.png">
+                <h3>Arlette Geller biomedical engineering<br>SPRING 2021</h3>
+            </div>
+
+            <a href="" class="TCbutton">
+                <div class="card">
+                    <img src="imgs/TCLogo.png">
+                </div>
+            </a>
+            <div class="hiddencontainer TC">
+                <img src="imgs/TCLogo.png">
+                <h3>Digital time capsule<br>FALL 2020</h3>
+            </div>
+
+            <a href="" class="TCbutton">
+                <div class="card">
+                    <img src="imgs/WFLogosmall.png">
+                </div>
+            </a>
+            <div class="hiddencontainer TC">
+                <img src="imgs/WFLogo.png">
+                <h3>Virtual 3D gallery<br>FALL 2020</h3>
+            </div>
+            
+            <a href="" class="Sketchbutton">
+                <div class="card">
+                    <img src="imgs/SketchesLogo3.png">
+                </div>
+            </a>
+            <div class="hiddencontainer Sketch">
+                <img src="imgs/SK_27.jpg">
+                <h3>Sketchbook pages<br>18-20'</h3>
+            </div>
+
+            <a href="" class="Posterbutton">
+                <div class="card">
+                    <img src="imgs/PostersLogo3.png">
+                </div>
+            </a>
+            <div class="hiddencontainer Poster">
+                <img src="imgs/NIGHTSMALL.jpg">
+                <h3>Posters dump<br></h3>
+            </div>
+
+            <a href="" class="TCbutton">
+                <div class="card">
+                    <img src="imgs/AGLogo.png">
+                </div>
+            </a>
+            <div class="hiddencontainer TC">
+                <img src="imgs/TCLogo.png">
+                <h3>SVA online art show<br>SPRING 2021</h3>
+            </div>
+
+        </div>
+
+        <div class="notcontainer">
+              <div class="notcard"></div>
+              <div class="notcard"></div>
+              <div class="notcard"></div>
+        </div>
+        
+        <!-- tilt.js -->
+        <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+        <script type="text/javascript">
+
+            // CHANGES
+            var card = document.querySelectorAll(".card")
+            for (var i = 0; i < card.length; i++) {
+                card[i].setAttribute("data-tilt", "");
+                card[i].setAttribute("data-tilt-reset", "false");
+            }
+
+            VanillaTilt.init(card, {
+                reverse: true,
+                max: 40,
+                startX: 0,
+                startY: 0,
+                speed: 5000,
+
+                scale: .990,
+                transition: true,
+                gyroscope: true,
+                gyroscopeMaxAngleX: 20,
+                gyroscopeMinAngleX: -20
+            });
+        </script>
+
+        <script>
+            // Reset VanillaTilt
+
+            timeOut = 500; // delay in milliseconds
+
+            $(".container").mouseleave(function () {
+                setTimeout(function() {
+                    var card = document.querySelectorAll(".card")
+                    for (var i = 0; i < card.length; i++) {
+                        card[i].vanillaTilt.destroy();
+                    }
+                    VanillaTilt.init(card, {
+                        reverse: true,
+                        max: 40,
+                        startX: 0,
+                        startY: 0,
+                        speed: 5000,
+
+                        scale: .990,
+                        transition: true,
+                        gyroscope: true,
+                        gyroscopeMaxAngleX: 20,
+                        gyroscopeMinAngleX: -20
+                    });
+                }, timeOut);
+            })
+
+        </script>
+
+        <!--  Typewriter.js  -->
+        <script>
+            var app = document.getElementById('khj');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 75,
+            });
+
+            typewriter
+                .typeString('eric joo')
+                .pauseFor(10000)
+                .deleteChars(10)
+                .typeString('hello')
+                .pauseFor(500)
+                .deleteChars(10)
+                .typeString(':-) :-) :-)')
+                .pauseFor(500)
+                .deleteChars(10)
+                .start();
+        </script>
+        
+        <script>
+            var app = document.getElementById('mobilekhj');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 75,
+            });
+
+            typewriter
+                .typeString('eric joo')
+                .pauseFor(10000)
+                .deleteChars(10)
+                .typeString('hello')
+                .pauseFor(500)
+                .deleteChars(10)
+                .typeString(':-) :-) :-)')
+                .pauseFor(500)
+                .deleteChars(10)
+                .start();
+        </script>
     </body>
+
+</html>

@@ -1,159 +1,122 @@
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .projectcontainer{
+    position: absolute;
+    right: 0px;
+    top: 0px;
     width: 70vw;
-    margin: 0vw 15vw 0vw 15vw;
+    overflow-x: hidden;
+    padding: 0px 20px 0px 35px;
 }
 
 @media all and (max-width: 800px) {
     .projectcontainer{
+        box-sizing: border-box;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 70px 20px 20px 20px;
         width: 100vw;
-        margin: 0vw 0vw 0vw 0vw;
     }
 }
 
-.mainphoto{
-    width: 70vw;
-    height: 50vh;
-}
-
-@media all and (max-width: 800px) {
-    .mainphoto{
-        width: 100vw;
-        height: 40vh;
-    }
-}
-
-.mainphoto img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.projecttitle{
-    width: 100%;
-    text-align: center;
-}
-
-.projecttitle h1{
-    font-family: "Syne";
-    font-size: 35px;
-    line-height: 45px;
-    padding: 20px 10vw 15px 10vw;
-}
-
-@media all and (max-width: 800px) {
-    .projecttitle h1{
-        font-family: "Syne";
-        font-size: 30px;
-        line-height: 38px;
-        padding: 20px 10vw 15px 10vw;
-    }
-}
-
-.descontainer{
-    padding: 0px 0vw 0px 0vw;
-}
-
-@media all and (max-width: 800px) {
-    .descontainer{
-        padding: 0px 30px 30px 30px;
-    }
-}
-
-.projectdescription{
-    float: left;
-    width: 75%;
-    margin-bottom: 50px;
-}
-
-@media all and (max-width: 800px) {
-    .projectdescription{
-        width: 100%;
-    }
-}
-
-.projectdescription h1{
-    font-family: "Hatton";
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 300;
+.skills{
+    position: absolute;
+    right: 30px;
+    top: 30px;
     
-    padding-top: -10px;
-    padding-bottom: 30px;
-}
-
-.projectdescription h2{
-    font-family: "Replica";
-    font-size: 15.5px;
-    line-height: 25px;
-    font-weight: 300;
-    text-align: justify;
-    text-justify: inter-word;
-    text-indent: 40px;
-}
-
-.projectdescription h3{
-    font-family: "Replica";
-    font-size: 15.5px;
-    line-height: 25px;
-    font-weight: 300;
-    margin-top: 0px;
 }
 
 @media all and (max-width: 800px) {
-    .projectdescription h2{
-        text-indent: 0px;
+    .skills{
+        display: none;
     }
 }
 
-.centerdescription{
-    float: left;
-    width: 60%;
-    margin: 0px 15vw 50px 15vw;
+.projectcontainer .skills h2{
+    color: black;
+    font-family: ReplicaReg;
+    font-size: 12.5px;
+    line-height: 18px;
+    text-align: right;
+    
 }
 
-.centerdescription h2{
-    font-family: "Replica";
-    font-size: 15.5px;
-    line-height: 25px;
-    font-weight: 300;
-    text-align: center;
-}
-
-
-.projectskills{
-    float: left;
-    width: 25%;
-
-}
-
-@media all and (max-width: 800px) {
-    .projectskills{
-       display: none;
-    }
-}
-
-.projectskills h3{
+.projectcontainer h1{
+    font-family: ReplicaReg;
+    font-size: 30px;
+    line-height: 40px;
     text-align: left;
-    font-family: "space mono";
-    font-size: 13px;
-    font-weight: 100;
-    line-height: 25px;
+    margin: 40px 0px 0px 0px;
 }
 
+@media all and (max-width: 800px) {
+    .projectcontainer h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
 
+.projectcontainer h2{
+    color: orangered;
+    font-family: Apercu;
+    font-size: 12.5px;
+    line-height: 25px;
+    text-align: left;
+}
+
+.projectcontainer h3{
+    max-width: 550px;
+    color: black;
+    font-family: Juliette;
+    font-size: 22px;
+    line-height: 37.5px;
+    text-align: left;
+}
+
+@media all and (max-width: 800px) {
+    .projectcontainer h3{
+        max-width: 90vw;
+    }
+}
+
+.projectcontainer a{
+    color: orangered;
+    font-family: Apercu;
+}
+
+.projdescription p{
+    color: black;
+    max-width: 550px;
+    font-family: Graphik;
+    font-size: 13px;
+    line-height: 22.5px;
+    text-align: justify;
+    text-justify: auto;
+    margin-bottom: 75px;
+}
+
+@media all and (max-width: 800px) {
+    .projectcontainer p{
+        max-width: 90vw;
+    }
+}
 
 .photosmall{
-    width: 49%;
-    height: 25vw;
     float: left;
-    margin-bottom: 50px;
-    
+    width: 42%;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 @media all and (max-width: 800px) {
     .photosmall{
         width: 100%;
-        height: 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
     }
 }
 
@@ -163,37 +126,18 @@
     object-fit: cover;
 }
 
-.photolarge{
-    width: 30vw;
-    float: left;
-    margin: 0vw 20vw 50px 20vw;
-}
-
-@media all and (max-width: 800px) {
-    .photolarge{
-        width: 100%;
-        height: 100%;
-        margin: 0vw 0vw 50px 0vw;
-    }
-}
-
-.photolarge img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .photowide{
-    width: 50vw;
     float: left;
-    margin: 0vw 10vw 50px 10vw;
+    width: 70%;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 @media all and (max-width: 800px) {
     .photowide{
         width: 100%;
-        height: 100%;
-        margin: 0vw 0vw 50px 0vw;
+        margin-right: 0px;
+        margin-bottom: 20px;
     }
 }
 
@@ -202,60 +146,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-.left{
-    padding-right: 1%;
-}
-
-.right{
-    padding-left: 1%;
-}
-
-.homeback{
-    position: fixed;
-    right: 20px;
-    bottom: 30px;
-    text-align: right;
-}
-
-@media all and (max-width: 800px) {
-    .homeback{
-        display: none;
-    }
-}
-
-
-.homeback a{
-   color: black;
-   
-}
-
-.homeback h1{
-    font-family: "Major Mono Display";
-    font-size: 2.6vw;
-    line-height: 20px;
-    text-transform: lowercase;
-    transition: .3s;
-}
-
-.homeback h1:hover{
-   color: limegreen;
-   text-transform: uppercase;
-}
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
 
 
 
