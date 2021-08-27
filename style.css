@@ -508,6 +508,89 @@ input[type=submit]:hover {
    
 }
 
+.nextprev{
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    
+    
+}
+
+.next{
+    position: absolute;
+    top: 0px;
+    left: 47px;
+    
+}
+
+.next a{
+    text-decoration: none;
+}
+
+.next h1{
+    font-family: ReplicaReg;
+    font-size: 40px;
+    color: orangered;
+    line-height: 0px;
+    
+}
+
+.prev{
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    
+}
+
+.prev a{
+    text-decoration: none;
+}
+
+.prev h1{
+    font-family: ReplicaReg;
+    font-size: 40px;
+    color: orangered;
+    line-height: 0px;
+    
+}
+
+.next: hover{
+    animation: .5s bounce infinite;
+    transform: scaleX(2);
+}
+
+.prev: hover{
+    animation: .5s bounce infinite;
+}
+
+
+@keyframes bounce{
+    
+    0%{
+        transform: translateY(0px);
+    }
+    
+    100%{
+        transform: translateY(50px);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
