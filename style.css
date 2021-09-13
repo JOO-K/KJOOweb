@@ -352,6 +352,10 @@ input[type=submit]:hover {
     display: block;
 }
 
+.extrasbutton:hover + .extras {
+    display: block;
+}
+
 
 .card img{
     position: relative;
@@ -424,6 +428,10 @@ input[type=submit]:hover {
 }
 
 .Sketch{
+    display: none;
+}
+
+.extras{
     display: none;
 }
 
@@ -509,7 +517,7 @@ input[type=submit]:hover {
 }
 
 .nextprev{
-    position: absolute;
+    position: fixed;
     padding: 0px;
     margin: 0px;
     
