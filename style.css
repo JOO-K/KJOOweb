@@ -122,6 +122,19 @@ nav{
     padding: 0px;
 }
 
+.whitekhj{
+    position: absolute;
+    left: 20px;
+    top: -57px;
+}
+
+.whitekhj h1{
+    color: white;
+    font-family: ReplicaReg;
+    font-size: 35px;
+    margin: 0px;
+    padding: 0px;
+}
 
 .khj{
     position: fixed;

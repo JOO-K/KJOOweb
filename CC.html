@@ -44,7 +44,9 @@
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
-                    <a href="index.html">Home</a>
+                    <div class="whitekhj">
+                        <a href="index.html" class="khjbutton"><h1 id="whitekhj">home</h1></a>
+                    </div>
                     <br>
                     <a href="OHT.html">OHT NYC</a>
                     <a href="CC.html">Crack Couture</a>
@@ -148,6 +150,27 @@
         
         <script>
             var app = document.getElementById('projectkhj');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 75,
+            });
+
+            typewriter
+                .typeString('home')
+                .pauseFor(10000)
+                .deleteChars(10)
+                .typeString('<<<<')
+                .pauseFor(500)
+                .deleteChars(10)
+                .typeString('hi :-)')
+                .pauseFor(500)
+                .deleteChars(10)
+                .start();
+        </script>
+        
+        <script>
+            var app = document.getElementById('whitekhj');
 
             var typewriter = new Typewriter(app, {
                 loop: true,
