@@ -43,6 +43,11 @@
     src: url(./fonts/Replica-Bold.otf);
 }
 
+html{
+/*    cursor: cell;*/
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=173337'),auto;
+}
+
 body{
     overflow: hidden;
     margin: 0;
@@ -89,7 +94,7 @@ nav{
 }
 
 .projectkhj h1{
-    color: orangered;
+    color: dodgerblue;
     font-family: ReplicaReg;
     font-size: 35px;
     margin: 0px;
@@ -115,7 +120,7 @@ nav{
 }
 
 .mobilekhj h1{
-    color: orangered;
+    color: dodgerblue;
     font-family: ReplicaReg;
     font-size: 40px;
     margin: 0px;
@@ -148,7 +153,7 @@ nav{
 }
 
 .khj h1{
-    color: orangered;
+    color: dodgerblue;
     font-family: ReplicaReg;
     font-size: 40px;
     margin: 0px;
@@ -193,7 +198,7 @@ nav{
 }
 
 .plus h1{
-    color: orangered;
+    color: dodgerblue;
     font-family: ReplicaReg;
     font-size: 40px;
     margin: 0px;
@@ -261,7 +266,8 @@ input[type=submit]:hover {
     position: absolute;
     right: 0px;
     top: 0px;
-    background-color: orangered;
+    background-color: dodgerblue;
+    overflow: hidden;
 }
 
 
@@ -280,7 +286,7 @@ input[type=submit]:hover {
     position: absolute;
     right: 100vh;
     top: 0px;
-    background-color: orangered;
+    background-color: dodgerblue;
 }
 
 @media all and (max-width: 800px) {
@@ -309,8 +315,8 @@ input[type=submit]:hover {
     float: left;
     box-sizing: border-box;
     background-color: whitesmoke;
-    width: calc(100vh / 3 - .1px);
-    height: calc(100vh / 3 - .1px);
+    width: calc(100vh / 3);
+    height: calc(100vh / 3);
     transition: .25s;
     border-radius: 18px;
     /*
@@ -318,6 +324,10 @@ input[type=submit]:hover {
     justify-content: center;
     */
     transform-style: preserve-3d;
+    transform-origin: center;
+      
+    animation: .4s cardanim ease-in;
+    
 }
 
 
@@ -326,6 +336,18 @@ input[type=submit]:hover {
         border-radius: 8px;
         width: calc(100vw / 3);
         height: calc(100vw / 3);
+        animation: none;
+    }
+}
+
+@keyframes cardanim {
+    0% {
+        transform: scale(0.5);
+        border-radius: 200px;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 18px;
     }
 }
 
@@ -375,8 +397,8 @@ input[type=submit]:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) translateZ(0px);
-    width: 45%;
-    height: 45%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
 
 }
@@ -469,7 +491,7 @@ input[type=submit]:hover {
     font-family: Apercu;
     font-size: 12.5px;
     line-height: 20px;
-    color: orangered;
+    color: dodgerblue;
 }
 
 .overlay { 
@@ -480,7 +502,7 @@ input[type=submit]:hover {
     z-index: 100000; 
     left: 0;
     top: 0;
-    background-color: orangered; 
+    background-color: dodgerblue; 
     overflow-x: hidden; 
     transition: 1s; 
 
@@ -557,7 +579,7 @@ input[type=submit]:hover {
 .next h1{
     font-family: ReplicaReg;
     font-size: 40px;
-    color: orangered;
+    color: dodgerblue;
     line-height: 0px;
     
 }
@@ -576,7 +598,7 @@ input[type=submit]:hover {
 .prev h1{
     font-family: ReplicaReg;
     font-size: 40px;
-    color: orangered;
+    color: dodgerblue;
     line-height: 0px;
     
 }
@@ -608,6 +630,88 @@ input[type=submit]:hover {
 }
 
 
+.anim-container{
+    position: absolute; 
+    left: 20px;
+    bottom: 150px;
+    height: 335px;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    
+}
+
+.scrollimg-container{
+    
+    background: transparent;
+    display: none;
+    position: absolute;
+    bottom: 35px;
+   
+   
+}
+
+#scrollimg1{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    
+    
+}
+
+
+.slidecontainer{
+   
+    display: block;
+    width: 280px;
+    height: 30px;
+    position: absolute;
+    
+    bottom: 0px;
+    margin: 0 auto;
+    
+    
+}
+
+.slidercss{
+     -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 155px;
+    height: 20px;
+    background: dodgerblue;
+    border-radius: 50px;
+    margin: 0px;
+    padding: 3px;
+}
+
+.slidercss:hover{
+    opacity: 1;
+}
+
+.slidercss::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  color: white;
+  background-color: white;
+     border-radius: 40px;
+  cursor: pointer;
+    transition: .3s;
+}
+
+.slidercss::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  color: white;
+  background: white;
+  border-radius: 40px;
+  cursor: pointer;
+    transition: 0.3s;
+}
+
+#demo{ color: transparent; }
 
 
 

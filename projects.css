@@ -27,7 +27,7 @@ body{
     position: absolute;
     right: 50px;
     top: 30px;
-    
+    display: none;
 }
 
 @media all and (max-width: 800px) {
@@ -61,7 +61,7 @@ body{
 }
 
 .projectcontainer h2{
-    color: orangered;
+    color: dodgerblue;
     font-family: Apercu;
     font-size: 12.5px;
     line-height: 25px;
@@ -71,7 +71,7 @@ body{
 .projectcontainer h3{
     max-width: 550px;
     color: black;
-    font-family: JulietteReg;
+    font-family: Apercu;
     font-size: 22px;
     line-height: 37.5px;
     text-align: left;
@@ -84,7 +84,7 @@ body{
 }
 
 .projectcontainer a{
-    color: orangered;
+    color: dodgerblue;
     font-family: Apercu;
 }
 
