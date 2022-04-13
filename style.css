@@ -642,6 +642,12 @@ input[type=submit]:hover {
     
 }
 
+@media all and (max-width: 800px) {
+    .anim-container{
+        display:none;
+    }
+}
+
 .scrollimg-container{
     
     background: transparent;
